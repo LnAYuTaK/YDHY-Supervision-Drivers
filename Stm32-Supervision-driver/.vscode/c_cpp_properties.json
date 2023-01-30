@@ -1,0 +1,88 @@
+//
+// !!! WARNING !!! AUTO-GENERATED FILE!
+// PLEASE DO NOT MODIFY IT AND USE "platformio.ini":
+// https://docs.platformio.org/page/projectconf/section_env_build.html#build-flags
+//
+{
+    "configurations": [
+        {
+            "name": "PlatformIO",
+            "includePath": [
+                "c:/Users/80787/Desktop/Drivers/Stm32-Supervision-driver/include",
+                "c:/Users/80787/Desktop/Drivers/Stm32-Supervision-driver",
+                "c:/Users/80787/Desktop/Drivers/Stm32-Supervision-driver/FATFS/App",
+                "c:/Users/80787/Desktop/Drivers/Stm32-Supervision-driver/FATFS/Target",
+                "c:/Users/80787/Desktop/Drivers/Stm32-Supervision-driver/Core/Inc",
+                "c:/Users/80787/Desktop/Drivers/Stm32-Supervision-driver/Core/Src",
+                "c:/Users/80787/Desktop/Drivers/Stm32-Supervision-driver/Drivers/CMSIS/Include",
+                "c:/Users/80787/Desktop/Drivers/Stm32-Supervision-driver/Drivers/CMSIS/Device/ST/STM32F1xx/Include",
+                "c:/Users/80787/Desktop/Drivers/Stm32-Supervision-driver/Drivers/CMSIS/Device/ST/STM32F1xx/Source",
+                "c:/Users/80787/Desktop/Drivers/Stm32-Supervision-driver/Drivers/STM32F1xx_HAL_Driver/Inc",
+                "c:/Users/80787/Desktop/Drivers/Stm32-Supervision-driver/Drivers/STM32F1xx_HAL_Driver/Inc/Legacye",
+                "c:/Users/80787/Desktop/Drivers/Stm32-Supervision-driver/Middlewares/Third_Party/FatFs/src/drivers",
+                "c:/Users/80787/Desktop/Drivers/Stm32-Supervision-driver/Middlewares/Third_Party/FatFs/src/option",
+                "c:/Users/80787/Desktop/Drivers/Stm32-Supervision-driver/Middlewares/Third_Party/FatFs/src",
+                "c:/Users/80787/Desktop/Drivers/Stm32-Supervision-driver/Middlewares/Third_Party/Nmea/include",
+                "c:/Users/80787/Desktop/Drivers/Stm32-Supervision-driver/Middlewares/Third_Party/Nmea/src",
+                "c:/Users/80787/Desktop/Drivers/Stm32-Supervision-driver/GPS",
+                "c:/Users/80787/Desktop/Drivers/Stm32-Supervision-driver/Config",
+                "c:/Users/80787/Desktop/Drivers/Stm32-Supervision-driver/SysState",
+                "c:/Users/80787/Desktop/Drivers/Stm32-Supervision-driver/Protocol",
+                "c:/Users/80787/Desktop/Drivers/Stm32-Supervision-driver/MeteringDrivers",
+                "c:/Users/80787/Desktop/Drivers/Stm32-Supervision-driver/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS",
+                "c:/Users/80787/Desktop/Drivers/Stm32-Supervision-driver/Middlewares/Third_Party/FreeRTOS/Source/include",
+                "c:/Users/80787/Desktop/Drivers/Stm32-Supervision-driver/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3",
+                "c:/Users/80787/Desktop/Drivers/Stm32-Supervision-driver/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang",
+                "c:/Users/80787/Desktop/Drivers/Stm32-Supervision-driver/Middlewares/Third_Party/FreeRTOS/Source",
+                ""
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "path": [
+                    "c:/Users/80787/Desktop/Drivers/Stm32-Supervision-driver/include",
+                    "c:/Users/80787/Desktop/Drivers/Stm32-Supervision-driver",
+                    "c:/Users/80787/Desktop/Drivers/Stm32-Supervision-driver/FATFS/App",
+                    "c:/Users/80787/Desktop/Drivers/Stm32-Supervision-driver/FATFS/Target",
+                    "c:/Users/80787/Desktop/Drivers/Stm32-Supervision-driver/Core/Inc",
+                    "c:/Users/80787/Desktop/Drivers/Stm32-Supervision-driver/Core/Src",
+                    "c:/Users/80787/Desktop/Drivers/Stm32-Supervision-driver/Drivers/CMSIS/Include",
+                    "c:/Users/80787/Desktop/Drivers/Stm32-Supervision-driver/Drivers/CMSIS/Device/ST/STM32F1xx/Include",
+                    "c:/Users/80787/Desktop/Drivers/Stm32-Supervision-driver/Drivers/CMSIS/Device/ST/STM32F1xx/Source",
+                    "c:/Users/80787/Desktop/Drivers/Stm32-Supervision-driver/Drivers/STM32F1xx_HAL_Driver/Inc",
+                    "c:/Users/80787/Desktop/Drivers/Stm32-Supervision-driver/Drivers/STM32F1xx_HAL_Driver/Inc/Legacye",
+                    "c:/Users/80787/Desktop/Drivers/Stm32-Supervision-driver/Middlewares/Third_Party/FatFs/src/drivers",
+                    "c:/Users/80787/Desktop/Drivers/Stm32-Supervision-driver/Middlewares/Third_Party/FatFs/src/option",
+                    "c:/Users/80787/Desktop/Drivers/Stm32-Supervision-driver/Middlewares/Third_Party/FatFs/src",
+                    "c:/Users/80787/Desktop/Drivers/Stm32-Supervision-driver/Middlewares/Third_Party/Nmea/include",
+                    "c:/Users/80787/Desktop/Drivers/Stm32-Supervision-driver/Middlewares/Third_Party/Nmea/src",
+                    "c:/Users/80787/Desktop/Drivers/Stm32-Supervision-driver/GPS",
+                    "c:/Users/80787/Desktop/Drivers/Stm32-Supervision-driver/Config",
+                    "c:/Users/80787/Desktop/Drivers/Stm32-Supervision-driver/SysState",
+                    "c:/Users/80787/Desktop/Drivers/Stm32-Supervision-driver/Protocol",
+                    "c:/Users/80787/Desktop/Drivers/Stm32-Supervision-driver/MeteringDrivers",
+                    "c:/Users/80787/Desktop/Drivers/Stm32-Supervision-driver/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS",
+                    "c:/Users/80787/Desktop/Drivers/Stm32-Supervision-driver/Middlewares/Third_Party/FreeRTOS/Source/include",
+                    "c:/Users/80787/Desktop/Drivers/Stm32-Supervision-driver/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3",
+                    "c:/Users/80787/Desktop/Drivers/Stm32-Supervision-driver/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang",
+                    "c:/Users/80787/Desktop/Drivers/Stm32-Supervision-driver/Middlewares/Third_Party/FreeRTOS/Source",
+                    ""
+                ]
+            },
+            "defines": [
+                "F_CPU=72000000L",
+                "PLATFORMIO=60106",
+                "STM32F103xE",
+                "STM32F1",
+                "STM32F103xE",
+                ""
+            ],
+            "compilerPath": "C:/Users/80787/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc.exe",
+            "compilerArgs": [
+                "-mthumb",
+                "-mcpu=cortex-m3",
+                ""
+            ]
+        }
+    ],
+    "version": 4
+}

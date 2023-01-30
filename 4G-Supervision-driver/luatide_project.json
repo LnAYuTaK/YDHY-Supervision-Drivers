@@ -1,0 +1,17 @@
+{
+	"version": "2.6",
+	"projectName": "4G-Supervision-driver",
+	"projectType": "pure",
+	"corePath": "C:\\Users\\80787\\AppData\\Roaming\\LuatIDE\\LuatideCore\\Air72XUX_CORE\\LuatOS-Air_V4018_RDA8910.pac",
+	"libPath": "C:\\Users\\80787\\AppData\\Roaming\\LuatIDE\\LuatideLib\\Air72XUX_LIB\\V2.4.3\\lib",
+	"moduleModel": "air72XUX/air82XUX",
+	"appFile": [
+		"luatide_project.json",
+		"main.lua"
+	],
+	"modulePort": "COM31",
+	"ignore": [
+		"SerialReSend.lua"
+	],
+	"simulatorRun": "disable"
+}
