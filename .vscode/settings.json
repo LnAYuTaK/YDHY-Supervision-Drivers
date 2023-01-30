@@ -1,7 +1,0 @@
-{
-    "git.ignoreLimitWarning": true,
-    "files.associations": {
-        "fatfs.h": "c",
-        "userapp.h": "c"
-    }
-}
