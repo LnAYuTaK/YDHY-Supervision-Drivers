@@ -1,0 +1,885 @@
+2023-01-18 09:05:17.5561 AT+LUATCONSOLE=1
+2023-01-18 09:05:17.5561 
+2023-01-18 09:05:17.5583 ATI
+2023-01-18 09:05:17.5591 
+2023-01-18 09:05:17.5591 LuatOS-Air_V4018_RDA8910
+2023-01-18 09:05:17.5601 
+2023-01-18 09:05:17.5601 OK
+2023-01-18 09:05:17.5611 AT+LUACHECKSUM=20edcf9d3462b8d64c5f1be73f541c89
+2023-01-18 09:05:17.5632 
+2023-01-18 09:05:17.5641 +LUACHECKSUM: 0
+2023-01-18 09:05:17.5651 
+2023-01-18 09:05:17.5651 OK
+2023-01-18 09:05:17.5661 AT*DOWNLOAD=1
+2023-01-18 09:05:27.5411 AT+LUATCONSOLE=1
+2023-01-18 09:05:27.5411 
+2023-01-18 09:05:30.4000 
+2023-01-18 09:05:30.4000 +CPIN: READY
+2023-01-18 09:05:30.4070 
+2023-01-18 09:05:30.4070 ^CARDMODE: 2
+2023-01-18 09:05:32.3965 > [I]-[poweron reason:] 3 FTP 2.0.0 2.4.3 LuatOS-Air_V4018_RDA8910
+2023-01-18 09:05:32.3984 [I]-[core build time] Oct 14 2022 15:22:25
+2023-01-18 09:05:32.4022 [I]-[ril.proatc] RDY
+2023-01-18 09:05:32.4037 [I]-[ril.proatc] +CPIN: READY
+2023-01-18 09:05:32.4057 [I]-[ril.proatc] ^CARDMODE: 2
+2023-01-18 09:05:32.4057 [I]-[ril.defurc] ^CARDMODE: 2
+2023-01-18 09:05:32.4087 [I]-[ril.sendat] ATE0
+2023-01-18 09:05:32.4097 [I]-[SIM.subscribe] nil RDY
+2023-01-18 09:05:32.4132 [I]-[ril.proatc] ATE0
+2023-01-18 09:05:32.4137 [I]-[ril.defurc] ATE0
+2023-01-18 09:05:32.4340 [I]-[ril.proatc] OK
+2023-01-18 09:05:32.4360 [I]-[ril.defrsp] ATE0 true OK nil
+2023-01-18 09:05:32.4382 [I]-[ril.sendat] AT+CMEE=0
+2023-01-18 09:05:32.4621 [I]-[ril.proatc] OK
+2023-01-18 09:05:32.4640 [I]-[ril.defrsp] AT+CMEE=0 true OK nil
+2023-01-18 09:05:32.4660 [I]-[ril.sendat] AT+SIMCROSS?
+2023-01-18 09:05:32.4911 [I]-[ril.proatc] +SIMCROSS:0
+2023-01-18 09:05:32.4931 [I]-[ril.proatc] OK
+2023-01-18 09:05:32.4961 [I]-[ril.sendat] AT+COPS?
+2023-01-18 09:05:32.5209 [I]-[ril.proatc] +COPS: 0
+2023-01-18 09:05:32.5213 [I]-[cops] nil nil nil
+2023-01-18 09:05:32.5244 [I]-[ril.proatc] OK
+2023-01-18 09:05:32.5263 [I]-[ril.defrsp] AT+COPS? true OK nil
+2023-01-18 09:05:32.5283 [I]-[ril.sendat] AT+CREG=2
+2023-01-18 09:05:32.5522 [I]-[ril.proatc] OK
+2023-01-18 09:05:32.5542 [I]-[ril.defrsp] AT+CREG=2 true OK nil
+2023-01-18 09:05:32.5562 [I]-[ril.sendat] AT+CGREG=2
+2023-01-18 09:05:32.5803 [I]-[ril.proatc] OK
+2023-01-18 09:05:32.5823 [I]-[ril.defrsp] AT+CGREG=2 true OK nil
+2023-01-18 09:05:32.5843 [I]-[ril.sendat] AT+CEREG=2
+2023-01-18 09:05:32.6090 [I]-[ril.proatc] OK
+2023-01-18 09:05:32.6106 [I]-[ril.defrsp] AT+CEREG=2 true OK nil
+2023-01-18 09:05:32.6126 [I]-[ril.sendat] AT+CREG?
+2023-01-18 09:05:32.6372 [I]-[ril.proatc] +CREG: 2,0,"0000","00000000",0
+2023-01-18 09:05:32.6382 [I]-[net.creg1] 0 +CREG: 
+2023-01-18 09:05:32.6402 [I]-[net.creg7] 0 0
+2023-01-18 09:05:32.6422 [I]-[ril.proatc] OK
+2023-01-18 09:05:32.6442 [I]-[ril.defrsp] AT+CREG? true OK nil
+2023-01-18 09:05:32.6462 [I]-[ril.sendat] AT+CGREG?
+2023-01-18 09:05:32.6719 [I]-[ril.proatc] +CGREG: 2,0,"0000","00000000"
+2023-01-18 09:05:32.6729 [I]-[net.creg1] 0 +CREG: 
+2023-01-18 09:05:32.6739 [I]-[net.creg7] 0 nil
+2023-01-18 09:05:32.6739 [I]-[net.creg9 ignore!!!]
+2023-01-18 09:05:32.6773 [I]-[ril.proatc] OK
+2023-01-18 09:05:32.6789 [I]-[ril.defrsp] AT+CGREG? true OK nil
+2023-01-18 09:05:32.6809 [I]-[ril.sendat] AT+CEREG?
+2023-01-18 09:05:32.7063 [I]-[ril.proatc] +CEREG: 2,0,"0000","00000000",0,0,0
+2023-01-18 09:05:32.7073 [I]-[net.creg1] 0 +CREG: 
+2023-01-18 09:05:32.7083 [W]-[net.creg1] no match +CEREG: 2,0,"0000","00000000",0,0,0
+2023-01-18 09:05:32.7105 [I]-[ril.proatc] OK
+2023-01-18 09:05:32.7129 [I]-[ril.defrsp] AT+CEREG? true OK nil
+2023-01-18 09:05:32.7153 [I]-[ril.sendat] AT+CALIBINFO?
+2023-01-18 09:05:32.7404 [I]-[ril.proatc] GSM_CALIBINFO: GSM_afc:0, GSM850_agc:0, GSM850_apc:0, GSM900_agc:0, GSM900_apc:0, DCS1800_agc:0,DCS1800_apc:0,
+2023-01-18 09:05:32.7407  PCS1900_agc:0, PCS1900_apc:0, GSM_FT:0, GSM_ANT:0 
+2023-01-18 09:05:32.7427 [I]-[ril.proatc] LTE_CALIBINFO: LTE_afc:1, LTE_TDD_agc:1, LTE_TDD_apc:1, LTE_FDD_agc:1, LTE_FDD_apc:1, FINAL_LTE:1, ANT_LTE:0
+2023-01-18 09:05:32.7453 [I]-[ril.proatc] OK
+2023-01-18 09:05:32.7493 [I]-[ril.sendat] AT*BAND?
+2023-01-18 09:05:32.7682 
+2023-01-18 09:05:32.7682 +CREG: 1,"6356","02e63481",7
+2023-01-18 09:05:32.7696 [I]-[ril.proatc] +CREG: 1,"6356","02e63481",7
+2023-01-18 09:05:32.7710 [I]-[net.creg1] 0 +CREG: 
+2023-01-18 09:05:32.7720 [I]-[net.creg7] 1 7
+2023-01-18 09:05:32.7740 [I]-[net.UpdNetMode] nil 0 17 17
+2023-01-18 09:05:32.7750 [I]-[net.NET_UPD_NET_MODE] 4
+2023-01-18 09:05:32.7777 [I]-[link.Pdp_Act] false 4 nil
+2023-01-18 09:05:32.7820 
+2023-01-18 09:05:32.7820 ^MODE: 17,17
+2023-01-18 09:05:32.7820 
+2023-01-18 09:05:32.7830 [I]-[ril.proatc] ^MODE: 17,17
+2023-01-18 09:05:32.7851 [I]-[net.UpdNetMode] nil 4 17 17
+2023-01-18 09:05:32.7876 
+2023-01-18 09:05:32.7876 +CEREG: 1,"6356","02e63481",7
+2023-01-18 09:05:32.7890 [I]-[ril.proatc] +CEREG: 1,"6356","02e63481",7
+2023-01-18 09:05:32.7900 [I]-[net.creg1] 4 +CEREG: 
+2023-01-18 09:05:32.7920 [I]-[net.creg7] 1 7
+2023-01-18 09:05:32.7930 [I]-[net.UpdNetMode] nil 4 17 17
+2023-01-18 09:05:32.7969 [I]-[ril.proatc] ERROR
+2023-01-18 09:05:32.7979 [I]-[ril.defrsp] AT*BAND? false ERROR nil
+2023-01-18 09:05:32.8013 [I]-[ril.sendat] AT+EEMOPT=1
+2023-01-18 09:05:32.8401 
+2023-01-18 09:05:32.8402 *CGEV: ACT,5,"cmiot.mnc004.mcc460.gprs","10.223.1.113"
+2023-01-18 09:05:32.8422 [I]-[ril.proatc] *CGEV: ACT,5,"cmiot.mnc004.mcc460.gprs","10.223.1.113"
+2023-01-18 09:05:32.8442 [I]-[link.cgevurc] *CGEV: ACT,5,"cmiot.mnc004.mcc460.gprs","10.223.1.113"
+2023-01-18 09:05:32.8472 
+2023-01-18 09:05:32.8477 +NITZ: 23/01/18,01:05:32+32,0
+2023-01-18 09:05:32.8502 [I]-[ril.proatc] +NITZ: 23/01/18,01:05:32+32,0
+2023-01-18 09:05:32.8733 [I]-[ril.proatc] OK
+2023-01-18 09:05:32.8733 [I]-[ril.sendat] AT+CIND=1
+2023-01-18 09:05:32.9038 [I]-[ril.proatc] OK
+2023-01-18 09:05:32.9068 [I]-[ril.sendat] AT+WISN?
+2023-01-18 09:05:32.9318 [I]-[ril.proatc] 20609071256585
+2023-01-18 09:05:32.9338 [I]-[ril.proatc] OK
+2023-01-18 09:05:32.9368 [I]-[ril.sendat] AT+CGSN
+2023-01-18 09:05:32.9622 [I]-[ril.proatc] 866250069439960
+2023-01-18 09:05:32.9642 [I]-[ril.proatc] OK
+2023-01-18 09:05:32.9732 [I]-[ril.sendat] AT+MUID?
+2023-01-18 09:05:32.9922 [I]-[ril.proatc] +MUID: 20220831054641A724461A2912117735
+2023-01-18 09:05:32.9942 [I]-[ril.proatc] OK
+2023-01-18 09:05:32.9972 [I]-[ril.sendat] AT*EXINFO?
+2023-01-18 09:05:33.0222 [I]-[ril.proatc] *EXINFO:poweron=3
+2023-01-18 09:05:33.0232 [I]-[ril.defurc] *EXINFO:poweron=3
+2023-01-18 09:05:33.0252 [I]-[ril.proatc] OK
+2023-01-18 09:05:33.0272 [I]-[ril.defrsp] AT*EXINFO? true OK nil
+2023-01-18 09:05:33.0302 [I]-[ril.sendat] AT+CGMM
+2023-01-18 09:05:33.0542 [I]-[ril.proatc] +CGMM: "Air724UG"
+2023-01-18 09:05:33.0572 [I]-[ril.proatc] OK
+2023-01-18 09:05:33.0603 [I]-[ril.sendat] AT+RNDISCALL=0,1
+2023-01-18 09:05:33.0759 [I]-[ril.proatc] OK
+2023-01-18 09:05:33.0925 [I]-[ril.defrsp] AT+RNDISCALL=0,1 true OK nil
+2023-01-18 09:05:33.0935 [I]-[ril.sendat] AT+ICCID
+2023-01-18 09:05:33.7801 [I]-[link.pdpCmdCnf] SET_PDP_4G_WAITAPN true nil nil
+2023-01-18 09:05:33.8811 [I]-[link.pdpCmdCnf] SET_PDP_4G_WAITAPN true nil nil
+2023-01-18 09:05:33.9848 [I]-[link.pdpCmdCnf] SET_PDP_4G_WAITAPN true nil nil
+2023-01-18 09:05:34.0883 [I]-[link.pdpCmdCnf] SET_PDP_4G_WAITAPN true nil nil
+2023-01-18 09:05:34.1171 
+2023-01-18 09:05:34.1171 SMS READY
+2023-01-18 09:05:34.1431 [I]-[ril.proatc] +ICCID: 898607B1192170016603
+2023-01-18 09:05:34.1461 [I]-[ril.proatc] OK
+2023-01-18 09:05:34.1491 [I]-[ril.sendat] AT+CIMI
+2023-01-18 09:05:34.1524 [I]-[ril.proatc] SMS READY
+2023-01-18 09:05:34.1531 [I]-[ril.defurc] SMS READY
+2023-01-18 09:05:34.1886 [I]-[link.pdpCmdCnf] SET_PDP_4G_WAITAPN true nil nil
+2023-01-18 09:05:34.2118 [I]-[ril.proatc] 460041147326555
+2023-01-18 09:05:34.2138 [I]-[ril.proatc] OK
+2023-01-18 09:05:34.2168 [I]-[ril.sendat] AT+CSQ
+2023-01-18 09:05:34.2424 [I]-[ril.proatc] +CSQ: 24,99
+2023-01-18 09:05:34.2457 [I]-[ril.proatc] OK
+2023-01-18 09:05:34.2481 [I]-[ril.sendat] AT+CESQ
+2023-01-18 09:05:34.2741 [I]-[ril.proatc] +CESQ: 99,99,255,255,7,44
+2023-01-18 09:05:34.2766 [I]-[ril.proatc] OK
+2023-01-18 09:05:34.2796 [I]-[ril.sendat] AT+CSQ
+2023-01-18 09:05:34.2937 [I]-[link.pdpCmdCnf] SET_PDP_4G_WAITAPN true nil nil
+2023-01-18 09:05:34.3049 [I]-[ril.proatc] +CSQ: 24,99
+2023-01-18 09:05:34.3079 [I]-[ril.proatc] OK
+2023-01-18 09:05:34.3111 [I]-[ril.sendat] AT+CESQ
+2023-01-18 09:05:34.3359 [I]-[ril.proatc] +CESQ: 99,99,255,255,7,44
+2023-01-18 09:05:34.3389 [I]-[ril.proatc] OK
+2023-01-18 09:05:34.3419 [I]-[ril.sendat] AT+CSQ
+2023-01-18 09:05:34.3669 [I]-[ril.proatc] +CSQ: 23,99
+2023-01-18 09:05:34.3689 [I]-[ril.proatc] OK
+2023-01-18 09:05:34.3729 [I]-[ril.sendat] AT+CESQ
+2023-01-18 09:05:34.3971 [I]-[ril.proatc] +CESQ: 99,99,255,255,9,44
+2023-01-18 09:05:34.4001 [I]-[ril.proatc] OK
+2023-01-18 09:05:34.4036 [I]-[ril.sendat] AT+CSQ
+2023-01-18 09:05:34.4302 [I]-[ril.proatc] +CSQ: 23,99
+2023-01-18 09:05:34.4333 [I]-[ril.proatc] OK
+2023-01-18 09:05:34.4363 [I]-[ril.sendat] AT+CESQ
+2023-01-18 09:05:34.4603 [I]-[ril.proatc] +CESQ: 99,99,255,255,9,44
+2023-01-18 09:05:34.4637 [I]-[ril.proatc] OK
+2023-01-18 09:05:34.4663 [I]-[ril.sendat] AT+EEMGINFO?
+2023-01-18 09:05:34.4913 [I]-[ril.proatc] +EEMGINFO: 3, 2
+2023-01-18 09:05:34.4923 [I]-[ril.defurc] +EEMGINFO: 3, 2
+2023-01-18 09:05:34.4953 [I]-[ril.proatc] OK
+2023-01-18 09:05:34.4963 [I]-[ril.defrsp] AT+EEMGINFO? true OK nil
+2023-01-18 09:05:34.4993 [I]-[ril.sendat] AT+COPS?
+2023-01-18 09:05:34.7224 [I]-[ril.proatc] +COPS: 0,2,"46000",7
+2023-01-18 09:05:34.7234 [I]-[cops] 2 46000 nil
+2023-01-18 09:05:34.7254 [I]-[ril.proatc] OK
+2023-01-18 09:05:34.7284 [I]-[ril.defrsp] AT+COPS? true OK nil
+2023-01-18 09:05:34.7304 [I]-[ril.sendat] AT+CEREG?
+2023-01-18 09:05:34.7526 [I]-[ril.proatc] +CEREG: 2,1,"6356","02e63481",7
+2023-01-18 09:05:34.7559 [I]-[net.creg1] 4 +CEREG: 
+2023-01-18 09:05:34.7569 [I]-[net.creg7] 1 7
+2023-01-18 09:05:34.7589 [I]-[net.UpdNetMode] nil 4 17 17
+2023-01-18 09:05:34.7618 [I]-[ril.proatc] OK
+2023-01-18 09:05:34.7628 [I]-[ril.defrsp] AT+CEREG? true OK nil
+2023-01-18 09:05:34.7648 [I]-[ril.sendat] AT+CSQ
+2023-01-18 09:05:34.7915 [I]-[ril.proatc] +CSQ: 23,99
+2023-01-18 09:05:34.7935 [I]-[ril.proatc] OK
+2023-01-18 09:05:34.7968 [I]-[ril.sendat] AT+CESQ
+2023-01-18 09:05:34.8219 [I]-[ril.proatc] +CESQ: 99,99,255,255,9,44
+2023-01-18 09:05:34.8241 [I]-[ril.proatc] OK
+2023-01-18 09:05:35.3454 
+2023-01-18 09:05:35.3464 +EEMLTESVC: 1120, 2, 0, 25430, 141, 38544, 38544, 39, 3, 48641153, 2, 44, 10, -5, 44, 10, 44, 10, 65535, 0, 11, 0, 0, 0, 0, 0, 65535, 0, 0, 0
+2023-01-18 09:05:35.3474 [I]-[ril.proatc] +EEMLTESVC: 1120, 2, 0, 25430, 141, 38544, 38544, 39, 3, 48641153, 2, 44, 10, -5, 44, 10, 44, 10, 65535, 0, 11
+2023-01-18 09:05:35.3474 , 0, 0, 0, 0, 0, 65535, 0, 0, 0
+2023-01-18 09:05:35.3510 [I]-[eemLteSvc1] 25430 48641153  1120 0
+2023-01-18 09:05:35.3540 
+2023-01-18 09:05:35.3540 +EEMLTEINTRA:0,0,385,49,19,1120,0,25430,207364609
+2023-01-18 09:05:35.3540 
+2023-01-18 09:05:35.3550 +EEMLTEINTRA:1,0,6,49,19,1120,0,25430,155779402
+2023-01-18 09:05:35.3550 
+2023-01-18 09:05:35.3550 +EEMLTEINTER:0,0,126,42,19,1120,0,25430,207364615
+2023-01-18 09:05:35.8257 [I]-[ril.sendat] AT+CGDCONT?
+2023-01-18 09:05:35.8542 [I]-[ril.proatc] +CGDCONT: 5,"IP","cmiot","10.223.1.113",0,0
+2023-01-18 09:05:35.8553 [I]-[link.pdpCmdCnf] AT+CGDCONT? true OK +CGDCONT: 5,"IP","cmiot","10.223.1.113",0,0
+2023-01-18 09:05:35.8562 [I]-[analysis_cgdcont end] +CGDCONT: 5,"IP","cmiot","10.223.1.113",0,0 nil nil
+2023-01-18 09:05:35.8574 [I]-[analysis_cgdcont ] 5 "IP" "cmiot" 10.223.1.113
+2023-01-18 09:05:35.8613 [I]-[ril.proatc] OK
+2023-01-18 09:05:35.8623 [I]-[link.pdpCmdCnf] CONNECT_DELAY true nil nil
+2023-01-18 09:05:35.8633 [I]-[publish IP_READY_IND]
+2023-01-18 09:05:35.8662 [I]-[ril.sendat] AT+CSQ
+2023-01-18 09:05:35.8724 [I]-[socket:connect-coreid,prot,addr,port,cert,timeout] 0 UDP 1.tw.pool.ntp.org 123 nil 120
+2023-01-18 09:05:35.8928 [I]-[ril.proatc] +CSQ: 23,99
+2023-01-18 09:05:35.8963 [I]-[ril.proatc] OK
+2023-01-18 09:05:35.8988 [I]-[ril.sendat] AT+CESQ
+2023-01-18 09:05:35.9221 [I]-[ril.proatc] +CESQ: 99,99,255,255,9,44
+2023-01-18 09:05:35.9269 [I]-[ril.proatc] OK
+2023-01-18 09:05:35.9584 [I]-[socket:on_response:] 0 SOCKET_CONNECT 0
+2023-01-18 09:05:35.9601 [I]-[socket:connect: connect ok]
+2023-01-18 09:05:35.9691 [I]-[socket:on_response:] 0 SOCKET_SEND 0
+2023-01-18 09:05:36.4125 [I]-[socket:connect-coreid,prot,addr,port,cert,timeout] 1 TCP 103.46.128.49 17353 nil 120
+2023-01-18 09:05:36.5281 [I]-[socket:on_response:] 1 SOCKET_CONNECT 0
+2023-01-18 09:05:36.5291 [I]-[socket:connect: connect ok]
+2023-01-18 09:05:37.5215 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:05:37.6452 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:05:38.5430 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:05:39.5690 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:05:40.5533 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:05:41.5683 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:05:42.5683 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:05:43.5715 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:05:43.9725 [I]-[socket:sock_close] 0
+2023-01-18 09:05:43.9755 [I]-[socket:on_response:] 0 SOCKET_CLOSE 1
+2023-01-18 09:05:44.5836 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:05:44.9816 [I]-[socket:connect-coreid,prot,addr,port,cert,timeout] 0 UDP s2c.time.edu.cn 123 nil 120
+2023-01-18 09:05:45.0600 [I]-[socket:on_response:] 0 SOCKET_CONNECT 0
+2023-01-18 09:05:45.0610 [I]-[socket:connect: connect ok]
+2023-01-18 09:05:45.0695 [I]-[socket:on_response:] 0 SOCKET_SEND 0
+2023-01-18 09:05:45.2105 [I]-[ril.sendat] AT+CCLK="23/01/18,09:05:45+32"
+2023-01-18 09:05:45.2125 [I]-[socket:sock_close] 0
+2023-01-18 09:05:45.2156 [I]-[socket:on_response:] 0 SOCKET_CLOSE 1
+2023-01-18 09:05:45.2166 [I]-[ntp.timeSync is date:] 2023/1/18,9:5:45
+2023-01-18 09:05:45.2506 [I]-[ril.proatc] OK
+2023-01-18 09:05:45.6192 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:05:46.6087 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:05:48.6061 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:05:49.6208 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:05:50.6186 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:05:51.6994 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:05:52.6938 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:05:53.6997 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:05:54.7156 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:05:55.7212 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:05:56.7213 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:05:57.7314 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:05:58.1855 
+2023-01-18 09:05:58.1855 +CREG: 1,"6356","09420769",7
+2023-01-18 09:05:58.1875 [I]-[ril.proatc] +CREG: 1,"6356","09420769",7
+2023-01-18 09:05:58.1885 [I]-[net.creg1] 4 +CEREG: 
+2023-01-18 09:05:58.1917 [I]-[ril.sendat] AT+CSQ
+2023-01-18 09:05:58.1947 
+2023-01-18 09:05:58.1947 +CEREG: 1,"6356","09420769",7
+2023-01-18 09:05:58.1967 [I]-[ril.proatc] +CEREG: 1,"6356","09420769",7
+2023-01-18 09:05:58.1977 [I]-[net.creg1] 4 +CEREG: 
+2023-01-18 09:05:58.1987 [I]-[net.creg7] 1 7
+2023-01-18 09:05:58.2011 [I]-[net.UpdNetMode] nil 4 17 17
+2023-01-18 09:05:58.2267 [I]-[ril.proatc] +CSQ: 22,99
+2023-01-18 09:05:58.2291 [I]-[ril.proatc] OK
+2023-01-18 09:05:58.2329 [I]-[ril.sendat] AT+CESQ
+2023-01-18 09:05:58.2577 [I]-[ril.proatc] +CESQ: 99,99,255,255,27,43
+2023-01-18 09:05:58.2597 [I]-[ril.proatc] OK
+2023-01-18 09:05:58.2627 [I]-[ril.sendat] AT+CSQ
+2023-01-18 09:05:58.2895 [I]-[ril.proatc] +CSQ: 21,99
+2023-01-18 09:05:58.2914 [I]-[ril.proatc] OK
+2023-01-18 09:05:58.2953 [I]-[ril.sendat] AT+CESQ
+2023-01-18 09:05:58.3204 [I]-[ril.proatc] +CESQ: 99,99,255,255,27,43
+2023-01-18 09:05:58.3228 [I]-[ril.proatc] OK
+2023-01-18 09:05:58.7315 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:05:58.8478 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:05:59.7465 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:00.7322 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:01.7673 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:01.9933 
+2023-01-18 09:06:01.9942 +CREG: 1,"6356","0949ad4a",7
+2023-01-18 09:06:01.9962 [I]-[ril.proatc] +CREG: 1,"6356","0949ad4a",7
+2023-01-18 09:06:01.9972 [I]-[net.creg1] 4 +CEREG: 
+2023-01-18 09:06:02.0002 [I]-[ril.sendat] AT+CSQ
+2023-01-18 09:06:02.0013 
+2023-01-18 09:06:02.0013 +CEREG: 1,"6356","0949ad4a",7
+2023-01-18 09:06:02.0033 [I]-[ril.proatc] +CEREG: 1,"6356","0949ad4a",7
+2023-01-18 09:06:02.0043 [I]-[net.creg1] 4 +CEREG: 
+2023-01-18 09:06:02.0053 [I]-[net.creg7] 1 7
+2023-01-18 09:06:02.0073 [I]-[net.UpdNetMode] nil 4 17 17
+2023-01-18 09:06:02.0297 [I]-[ril.proatc] +CSQ: 20,99
+2023-01-18 09:06:02.0359 [I]-[ril.proatc] OK
+2023-01-18 09:06:02.0391 [I]-[ril.sendat] AT+CESQ
+2023-01-18 09:06:02.0645 [I]-[ril.proatc] +CESQ: 99,99,255,255,27,42
+2023-01-18 09:06:02.0667 [I]-[ril.proatc] OK
+2023-01-18 09:06:02.0698 [I]-[ril.sendat] AT+CSQ
+2023-01-18 09:06:02.0949 [I]-[ril.proatc] +CSQ: 20,99
+2023-01-18 09:06:02.0980 [I]-[ril.proatc] OK
+2023-01-18 09:06:02.1019 [I]-[ril.sendat] AT+CESQ
+2023-01-18 09:06:02.1273 [I]-[ril.proatc] +CESQ: 99,99,255,255,27,42
+2023-01-18 09:06:02.1293 [I]-[ril.proatc] OK
+2023-01-18 09:06:02.7319 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:03.0413 
+2023-01-18 09:06:03.0413 +CREG: 1,"6356","09420769",7
+2023-01-18 09:06:03.0463 [I]-[ril.proatc] +CREG: 1,"6356","09420769",7
+2023-01-18 09:06:03.0473 [I]-[net.creg1] 4 +CEREG: 
+2023-01-18 09:06:03.0500 [I]-[ril.sendat] AT+CSQ
+2023-01-18 09:06:03.0520 
+2023-01-18 09:06:03.0520 +CEREG: 1,"6356","09420769",7
+2023-01-18 09:06:03.0540 [I]-[ril.proatc] +CEREG: 1,"6356","09420769",7
+2023-01-18 09:06:03.0550 [I]-[net.creg1] 4 +CEREG: 
+2023-01-18 09:06:03.0560 [I]-[net.creg7] 1 7
+2023-01-18 09:06:03.0580 [I]-[net.UpdNetMode] nil 4 17 17
+2023-01-18 09:06:03.0833 [I]-[ril.proatc] +CSQ: 23,99
+2023-01-18 09:06:03.0863 [I]-[ril.proatc] OK
+2023-01-18 09:06:03.0893 [I]-[ril.sendat] AT+CESQ
+2023-01-18 09:06:03.1143 [I]-[ril.proatc] +CESQ: 99,99,255,255,5,39
+2023-01-18 09:06:03.1175 [I]-[ril.proatc] OK
+2023-01-18 09:06:03.1193 [I]-[ril.sendat] AT+CSQ
+2023-01-18 09:06:03.1453 [I]-[ril.proatc] +CSQ: 23,99
+2023-01-18 09:06:03.1483 [I]-[ril.proatc] OK
+2023-01-18 09:06:03.1513 [I]-[ril.sendat] AT+CESQ
+2023-01-18 09:06:03.1763 [I]-[ril.proatc] +CESQ: 99,99,255,255,5,39
+2023-01-18 09:06:03.1783 [I]-[ril.proatc] OK
+2023-01-18 09:06:03.7554 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:04.7504 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:05.7475 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:06.7526 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:07.7526 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:08.7757 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:09.7618 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:10.7678 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:11.7731 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:12.7720 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:13.7871 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:14.7829 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:15.7879 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:16.7921 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:17.7923 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:18.8158 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:19.8033 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:20.8082 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:21.8128 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:22.8185 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:23.8283 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:24.8236 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:25.8284 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:26.8335 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:27.8387 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:28.8482 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:29.8432 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:30.8491 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:31.8537 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:32.8602 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:33.8725 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:34.8786 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:35.8834 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:36.8935 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:37.9094 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:38.9095 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:39.9135 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:40.9297 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:41.9370 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:42.9396 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:43.9524 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:44.9545 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:45.9710 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:46.9800 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:47.9795 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:48.9839 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:49.9966 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:51.0101 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:52.0100 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:53.0202 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:54.0141 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:54.9240 
+2023-01-18 09:06:54.9240 +CREG: 1,"6356","0949006a",7
+2023-01-18 09:06:54.9464 [I]-[ril.proatc] +CREG: 1,"6356","0949006a",7
+2023-01-18 09:06:54.9473 [I]-[net.creg1] 4 +CEREG: 
+2023-01-18 09:06:54.9506 [I]-[ril.sendat] AT+CSQ
+2023-01-18 09:06:54.9843 
+2023-01-18 09:06:54.9843 +CEREG: 1,"6356","0949006a",7
+2023-01-18 09:06:54.9893 [I]-[ril.proatc] +CEREG: 1,"6356","0949006a",7
+2023-01-18 09:06:54.9913 [I]-[net.creg1] 4 +CEREG: 
+2023-01-18 09:06:54.9923 [I]-[net.creg7] 1 7
+2023-01-18 09:06:54.9933 [I]-[net.UpdNetMode] nil 4 17 17
+2023-01-18 09:06:55.0199 [I]-[ril.proatc] +CSQ: 23,99
+2023-01-18 09:06:55.0219 [I]-[ril.proatc] OK
+2023-01-18 09:06:55.0252 [I]-[ril.sendat] AT+CESQ
+2023-01-18 09:06:55.0502 [I]-[ril.proatc] +CESQ: 99,99,255,255,5,40
+2023-01-18 09:06:55.0536 [I]-[ril.proatc] OK
+2023-01-18 09:06:55.0562 [I]-[ril.sendat] AT+CSQ
+2023-01-18 09:06:55.0809 [I]-[ril.proatc] +CSQ: 23,99
+2023-01-18 09:06:55.0839 [I]-[ril.proatc] OK
+2023-01-18 09:06:55.0869 [I]-[ril.sendat] AT+CESQ
+2023-01-18 09:06:55.1126 [I]-[ril.proatc] +CESQ: 99,99,255,255,5,40
+2023-01-18 09:06:55.1154 [I]-[ril.proatc] OK
+2023-01-18 09:06:55.1224 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:56.0223 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:57.0280 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:57.2562 
+2023-01-18 09:06:57.2562 +CREG: 1,"6356","09420769",7
+2023-01-18 09:06:57.2582 [I]-[ril.proatc] +CREG: 1,"6356","09420769",7
+2023-01-18 09:06:57.2602 [I]-[net.creg1] 4 +CEREG: 
+2023-01-18 09:06:57.2622 [I]-[ril.sendat] AT+CSQ
+2023-01-18 09:06:57.2642 
+2023-01-18 09:06:57.2642 +CEREG: 1,"6356","09420769",7
+2023-01-18 09:06:57.2652 [I]-[ril.proatc] +CEREG: 1,"6356","09420769",7
+2023-01-18 09:06:57.2672 [I]-[net.creg1] 4 +CEREG: 
+2023-01-18 09:06:57.2682 [I]-[net.creg7] 1 7
+2023-01-18 09:06:57.2703 [I]-[net.UpdNetMode] nil 4 17 17
+2023-01-18 09:06:57.2962 [I]-[ril.proatc] +CSQ: 22,99
+2023-01-18 09:06:57.2985 [I]-[ril.proatc] OK
+2023-01-18 09:06:57.3021 [I]-[ril.sendat] AT+CESQ
+2023-01-18 09:06:57.3271 [I]-[ril.proatc] +CESQ: 99,99,255,255,8,42
+2023-01-18 09:06:57.3292 [I]-[ril.proatc] OK
+2023-01-18 09:06:57.3321 [I]-[ril.sendat] AT+CSQ
+2023-01-18 09:06:57.3574 [I]-[ril.proatc] +CSQ: 22,99
+2023-01-18 09:06:57.3604 [I]-[ril.proatc] OK
+2023-01-18 09:06:57.3638 [I]-[ril.sendat] AT+CESQ
+2023-01-18 09:06:57.3883 [I]-[ril.proatc] +CESQ: 99,99,255,255,8,42
+2023-01-18 09:06:57.3913 [I]-[ril.proatc] OK
+2023-01-18 09:06:58.0495 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:06:59.0362 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:00.0493 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:01.0463 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:02.0514 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:03.0610 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:04.0564 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:05.0614 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:06.0710 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:07.0667 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:08.0807 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:09.0843 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:09.3063 
+2023-01-18 09:07:09.3063 +CREG: 1,"6356","0949006a",7
+2023-01-18 09:07:09.3083 [I]-[ril.proatc] +CREG: 1,"6356","0949006a",7
+2023-01-18 09:07:09.3093 [I]-[net.creg1] 4 +CEREG: 
+2023-01-18 09:07:09.3121 [I]-[ril.sendat] AT+CSQ
+2023-01-18 09:07:09.3153 
+2023-01-18 09:07:09.3153 +CEREG: 1,"6356","0949006a",7
+2023-01-18 09:07:09.3173 [I]-[ril.proatc] +CEREG: 1,"6356","0949006a",7
+2023-01-18 09:07:09.3183 [I]-[net.creg1] 4 +CEREG: 
+2023-01-18 09:07:09.3199 [I]-[net.creg7] 1 7
+2023-01-18 09:07:09.3209 [I]-[net.UpdNetMode] nil 4 17 17
+2023-01-18 09:07:09.3464 [I]-[ril.proatc] +CSQ: 22,99
+2023-01-18 09:07:09.3493 [I]-[ril.proatc] OK
+2023-01-18 09:07:09.3524 [I]-[ril.sendat] AT+CESQ
+2023-01-18 09:07:09.3789 [I]-[ril.proatc] +CESQ: 99,99,255,255,8,42
+2023-01-18 09:07:09.3819 [I]-[ril.proatc] OK
+2023-01-18 09:07:09.3851 [I]-[ril.sendat] AT+CSQ
+2023-01-18 09:07:09.4079 [I]-[ril.proatc] +CSQ: 22,99
+2023-01-18 09:07:09.4130 [I]-[ril.proatc] OK
+2023-01-18 09:07:09.4164 [I]-[ril.sendat] AT+CESQ
+2023-01-18 09:07:09.4363 [I]-[ril.proatc] +CESQ: 99,99,255,255,8,42
+2023-01-18 09:07:09.4441 [I]-[ril.proatc] OK
+2023-01-18 09:07:10.0898 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:11.0935 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:12.1056 
+2023-01-18 09:07:12.1066 +CREG: 1,"6356","09420769",7
+2023-01-18 09:07:12.1087 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:12.1186 [I]-[ril.proatc] +CREG: 1,"6356","09420769",7
+2023-01-18 09:07:12.1196 [I]-[net.creg1] 4 +CEREG: 
+2023-01-18 09:07:12.1216 [I]-[ril.sendat] AT+CSQ
+2023-01-18 09:07:12.1256 
+2023-01-18 09:07:12.1256 +CEREG: 1,"6356","09420769",7
+2023-01-18 09:07:12.1276 [I]-[ril.proatc] +CEREG: 1,"6356","09420769",7
+2023-01-18 09:07:12.1286 [I]-[net.creg1] 4 +CEREG: 
+2023-01-18 09:07:12.1296 [I]-[net.creg7] 1 7
+2023-01-18 09:07:12.1306 [I]-[net.UpdNetMode] nil 4 17 17
+2023-01-18 09:07:12.1577 [I]-[ril.proatc] +CSQ: 22,99
+2023-01-18 09:07:12.1597 [I]-[ril.proatc] OK
+2023-01-18 09:07:12.1627 [I]-[ril.sendat] AT+CESQ
+2023-01-18 09:07:12.1887 [I]-[ril.proatc] +CESQ: 99,99,255,255,8,42
+2023-01-18 09:07:12.1911 [I]-[ril.proatc] OK
+2023-01-18 09:07:12.1939 [I]-[ril.sendat] AT+CSQ
+2023-01-18 09:07:12.2189 [I]-[ril.proatc] +CSQ: 22,99
+2023-01-18 09:07:12.2222 [I]-[ril.proatc] OK
+2023-01-18 09:07:12.2259 [I]-[ril.sendat] AT+CESQ
+2023-01-18 09:07:12.2518 [I]-[ril.proatc] +CESQ: 99,99,255,255,11,44
+2023-01-18 09:07:12.2543 [I]-[ril.proatc] OK
+2023-01-18 09:07:13.0871 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:14.1148 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:15.0960 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:16.1082 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:17.1141 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:18.1208 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:19.1403 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:20.1337 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:21.1606 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:22.1544 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:23.1652 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:24.1952 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:25.1807 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:26.2008 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:27.1948 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:28.1932 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:29.2205 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:30.2129 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:31.2207 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:32.2188 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:33.2246 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:34.2599 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:35.2509 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:36.2448 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:37.2392 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:38.2452 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:39.2494 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:40.2652 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:41.2604 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:42.2713 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:43.2813 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:44.2714 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:45.2764 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:46.1206 
+2023-01-18 09:07:46.1206 +CREG: 1,"6356","02e63481",7
+2023-01-18 09:07:46.1226 [I]-[ril.proatc] +CREG: 1,"6356","02e63481",7
+2023-01-18 09:07:46.1247 [I]-[net.creg1] 4 +CEREG: 
+2023-01-18 09:07:46.1276 [I]-[ril.sendat] AT+CSQ
+2023-01-18 09:07:46.1286 
+2023-01-18 09:07:46.1296 +CEREG: 1,"6356","02e63481",7
+2023-01-18 09:07:46.1306 [I]-[ril.proatc] +CEREG: 1,"6356","02e63481",7
+2023-01-18 09:07:46.1316 [I]-[net.creg1] 4 +CEREG: 
+2023-01-18 09:07:46.1336 [I]-[net.creg7] 1 7
+2023-01-18 09:07:46.1346 [I]-[net.UpdNetMode] nil 4 17 17
+2023-01-18 09:07:46.1604 [I]-[ril.proatc] +CSQ: 23,99
+2023-01-18 09:07:46.1624 [I]-[ril.proatc] OK
+2023-01-18 09:07:46.1664 [I]-[ril.sendat] AT+CESQ
+2023-01-18 09:07:46.1924 [I]-[ril.proatc] +CESQ: 99,99,255,255,10,44
+2023-01-18 09:07:46.1959 [I]-[ril.proatc] OK
+2023-01-18 09:07:46.1990 [I]-[ril.sendat] AT+CSQ
+2023-01-18 09:07:46.2050 
+2023-01-18 09:07:46.2050 +CREG: 1,"6356","0c5c2229",7
+2023-01-18 09:07:46.2068 [I]-[ril.proatc] +CREG: 1,"6356","0c5c2229",7
+2023-01-18 09:07:46.2078 [I]-[net.creg1] 4 +CEREG: 
+2023-01-18 09:07:46.2118 
+2023-01-18 09:07:46.2118 +CEREG: 1,"6356","0c5c2229",7
+2023-01-18 09:07:46.2128 [I]-[ril.proatc] +CEREG: 1,"6356","0c5c2229",7
+2023-01-18 09:07:46.2148 [I]-[net.creg1] 4 +CEREG: 
+2023-01-18 09:07:46.2160 [I]-[net.creg7] 1 7
+2023-01-18 09:07:46.2168 [I]-[net.UpdNetMode] nil 4 17 17
+2023-01-18 09:07:46.2429 [I]-[ril.proatc] +CSQ: 23,99
+2023-01-18 09:07:46.2449 [I]-[ril.proatc] OK
+2023-01-18 09:07:46.2484 [I]-[ril.sendat] AT+CESQ
+2023-01-18 09:07:46.2732 [I]-[ril.proatc] +CESQ: 99,99,255,255,10,44
+2023-01-18 09:07:46.2762 [I]-[ril.proatc] OK
+2023-01-18 09:07:46.2797 [I]-[ril.sendat] AT+CSQ
+2023-01-18 09:07:46.2827 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:46.3018 [I]-[ril.proatc] +CSQ: 23,99
+2023-01-18 09:07:46.3078 [I]-[ril.proatc] OK
+2023-01-18 09:07:46.3107 [I]-[ril.sendat] AT+CESQ
+2023-01-18 09:07:46.3367 [I]-[ril.proatc] +CESQ: 99,99,255,255,10,44
+2023-01-18 09:07:46.3387 [I]-[ril.proatc] OK
+2023-01-18 09:07:46.3418 [I]-[ril.sendat] AT+CSQ
+2023-01-18 09:07:46.3675 [I]-[ril.proatc] +CSQ: 23,99
+2023-01-18 09:07:46.3702 [I]-[ril.proatc] OK
+2023-01-18 09:07:46.3724 [I]-[ril.sendat] AT+CESQ
+2023-01-18 09:07:46.3978 [I]-[ril.proatc] +CESQ: 99,99,255,255,10,44
+2023-01-18 09:07:46.3998 [I]-[ril.proatc] OK
+2023-01-18 09:07:47.2934 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:48.2969 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:49.0746 
+2023-01-18 09:07:49.0755 +CREG: 1,"6356","0949006a",7
+2023-01-18 09:07:49.0775 [I]-[ril.proatc] +CREG: 1,"6356","0949006a",7
+2023-01-18 09:07:49.0785 [I]-[net.creg1] 4 +CEREG: 
+2023-01-18 09:07:49.0805 [I]-[ril.sendat] AT+CSQ
+2023-01-18 09:07:49.0846 
+2023-01-18 09:07:49.0846 +CEREG: 1,"6356","0949006a",7
+2023-01-18 09:07:49.0867 [I]-[ril.proatc] +CEREG: 1,"6356","0949006a",7
+2023-01-18 09:07:49.0877 [I]-[net.creg1] 4 +CEREG: 
+2023-01-18 09:07:49.0887 [I]-[net.creg7] 1 7
+2023-01-18 09:07:49.0907 [I]-[net.UpdNetMode] nil 4 17 17
+2023-01-18 09:07:49.1165 [I]-[ril.proatc] +CSQ: 22,99
+2023-01-18 09:07:49.1185 [I]-[ril.proatc] OK
+2023-01-18 09:07:49.1216 [I]-[ril.sendat] AT+CESQ
+2023-01-18 09:07:49.1475 [I]-[ril.proatc] +CESQ: 99,99,255,255,10,40
+2023-01-18 09:07:49.1505 [I]-[ril.proatc] OK
+2023-01-18 09:07:49.1535 [I]-[ril.sendat] AT+CSQ
+2023-01-18 09:07:49.1795 [I]-[ril.proatc] +CSQ: 22,99
+2023-01-18 09:07:49.1875 [I]-[ril.proatc] OK
+2023-01-18 09:07:49.1905 [I]-[ril.sendat] AT+CESQ
+2023-01-18 09:07:49.2155 [I]-[ril.proatc] +CESQ: 99,99,255,255,10,40
+2023-01-18 09:07:49.2186 [I]-[ril.proatc] OK
+2023-01-18 09:07:49.2965 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:50.3006 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:51.3136 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:51.6472 
+2023-01-18 09:07:51.6472 +CREG: 1,"6356","0c5c2229",7
+2023-01-18 09:07:51.6576 [I]-[ril.proatc] +CREG: 1,"6356","0c5c2229",7
+2023-01-18 09:07:51.6587 [I]-[net.creg1] 4 +CEREG: 
+2023-01-18 09:07:51.6608 [I]-[ril.sendat] AT+CSQ
+2023-01-18 09:07:51.6677 
+2023-01-18 09:07:51.6677 +CEREG: 1,"6356","0c5c2229",7
+2023-01-18 09:07:51.6697 [I]-[ril.proatc] +CEREG: 1,"6356","0c5c2229",7
+2023-01-18 09:07:51.6717 [I]-[net.creg1] 4 +CEREG: 
+2023-01-18 09:07:51.6727 [I]-[net.creg7] 1 7
+2023-01-18 09:07:51.6737 [I]-[net.UpdNetMode] nil 4 17 17
+2023-01-18 09:07:51.6994 [I]-[ril.proatc] +CSQ: 22,99
+2023-01-18 09:07:51.7018 [I]-[ril.proatc] OK
+2023-01-18 09:07:51.7054 [I]-[ril.sendat] AT+CESQ
+2023-01-18 09:07:51.7297 [I]-[ril.proatc] +CESQ: 99,99,255,255,10,40
+2023-01-18 09:07:51.7330 [I]-[ril.proatc] OK
+2023-01-18 09:07:51.7358 [I]-[ril.sendat] AT+CSQ
+2023-01-18 09:07:51.7607 [I]-[ril.proatc] +CSQ: 22,99
+2023-01-18 09:07:51.7638 [I]-[ril.proatc] OK
+2023-01-18 09:07:51.7667 [I]-[ril.sendat] AT+CESQ
+2023-01-18 09:07:51.7934 [I]-[ril.proatc] +CESQ: 99,99,255,255,10,40
+2023-01-18 09:07:51.7955 [I]-[ril.proatc] OK
+2023-01-18 09:07:52.3186 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:53.3337 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:53.5651 
+2023-01-18 09:07:53.5653 +CREG: 1,"6356","0949006a",7
+2023-01-18 09:07:53.5673 [I]-[ril.proatc] +CREG: 1,"6356","0949006a",7
+2023-01-18 09:07:53.5683 [I]-[net.creg1] 4 +CEREG: 
+2023-01-18 09:07:53.5711 [I]-[ril.sendat] AT+CSQ
+2023-01-18 09:07:53.5743 
+2023-01-18 09:07:53.5753 +CEREG: 1,"6356","0949006a",7
+2023-01-18 09:07:53.5763 [I]-[ril.proatc] +CEREG: 1,"6356","0949006a",7
+2023-01-18 09:07:53.5773 [I]-[net.creg1] 4 +CEREG: 
+2023-01-18 09:07:53.5791 [I]-[net.creg7] 1 7
+2023-01-18 09:07:53.5801 [I]-[net.UpdNetMode] nil 4 17 17
+2023-01-18 09:07:53.6060 [I]-[ril.proatc] +CSQ: 22,99
+2023-01-18 09:07:53.6080 [I]-[ril.proatc] OK
+2023-01-18 09:07:53.6110 [I]-[ril.sendat] AT+CESQ
+2023-01-18 09:07:53.6363 [I]-[ril.proatc] +CESQ: 99,99,255,255,10,40
+2023-01-18 09:07:53.6399 [I]-[ril.proatc] OK
+2023-01-18 09:07:53.6417 [I]-[ril.sendat] AT+CSQ
+2023-01-18 09:07:53.6678 [I]-[ril.proatc] +CSQ: 22,99
+2023-01-18 09:07:53.6708 [I]-[ril.proatc] OK
+2023-01-18 09:07:53.6738 [I]-[ril.sendat] AT+CESQ
+2023-01-18 09:07:53.6982 [I]-[ril.proatc] +CESQ: 99,99,255,255,10,40
+2023-01-18 09:07:53.7012 [I]-[ril.proatc] OK
+2023-01-18 09:07:54.3159 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:55.3227 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:55.8260 
+2023-01-18 09:07:55.8260 +CREG: 1,"6356","0c5c2229",7
+2023-01-18 09:07:55.8291 [I]-[ril.proatc] +CREG: 1,"6356","0c5c2229",7
+2023-01-18 09:07:55.8311 [I]-[net.creg1] 4 +CEREG: 
+2023-01-18 09:07:55.8363 [I]-[ril.sendat] AT+CSQ
+2023-01-18 09:07:55.8417 
+2023-01-18 09:07:55.8417 +CEREG: 1,"6356","0c5c2229",7
+2023-01-18 09:07:55.8451 [I]-[ril.proatc] +CEREG: 1,"6356","0c5c2229",7
+2023-01-18 09:07:55.8461 [I]-[net.creg1] 4 +CEREG: 
+2023-01-18 09:07:55.8471 [I]-[net.creg7] 1 7
+2023-01-18 09:07:55.8491 [I]-[net.UpdNetMode] nil 4 17 17
+2023-01-18 09:07:55.8730 [I]-[ril.proatc] +CSQ: 22,99
+2023-01-18 09:07:55.8776 [I]-[ril.proatc] OK
+2023-01-18 09:07:55.8810 [I]-[ril.sendat] AT+CESQ
+2023-01-18 09:07:55.9056 [I]-[ril.proatc] +CESQ: 99,99,255,255,10,40
+2023-01-18 09:07:55.9083 [I]-[ril.proatc] OK
+2023-01-18 09:07:55.9117 [I]-[ril.sendat] AT+CSQ
+2023-01-18 09:07:55.9367 [I]-[ril.proatc] +CSQ: 22,99
+2023-01-18 09:07:55.9388 [I]-[ril.proatc] OK
+2023-01-18 09:07:55.9428 [I]-[ril.sendat] AT+CESQ
+2023-01-18 09:07:55.9678 [I]-[ril.proatc] +CESQ: 99,99,255,255,10,40
+2023-01-18 09:07:55.9705 [I]-[ril.proatc] OK
+2023-01-18 09:07:56.3293 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:57.3364 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:58.3577 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:59.3527 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:07:59.4781 
+2023-01-18 09:07:59.4781 +CREG: 1,"6356","0949ad4a",7
+2023-01-18 09:07:59.4797 [I]-[ril.proatc] +CREG: 1,"6356","0949ad4a",7
+2023-01-18 09:07:59.4816 [I]-[net.creg1] 4 +CEREG: 
+2023-01-18 09:07:59.4839 [I]-[ril.sendat] AT+CSQ
+2023-01-18 09:07:59.4849 
+2023-01-18 09:07:59.4859 +CEREG: 1,"6356","0949ad4a",7
+2023-01-18 09:07:59.4869 [I]-[ril.proatc] +CEREG: 1,"6356","0949ad4a",7
+2023-01-18 09:07:59.4889 [I]-[net.creg1] 4 +CEREG: 
+2023-01-18 09:07:59.4900 [I]-[net.creg7] 1 7
+2023-01-18 09:07:59.4910 [I]-[net.UpdNetMode] nil 4 17 17
+2023-01-18 09:07:59.5176 [I]-[ril.proatc] +CSQ: 22,99
+2023-01-18 09:07:59.5198 [I]-[ril.proatc] OK
+2023-01-18 09:07:59.5242 [I]-[ril.sendat] AT+CESQ
+2023-01-18 09:07:59.5488 [I]-[ril.proatc] +CESQ: 99,99,255,255,10,40
+2023-01-18 09:07:59.5518 [I]-[ril.proatc] OK
+2023-01-18 09:07:59.5549 [I]-[ril.sendat] AT+CSQ
+2023-01-18 09:07:59.5798 [I]-[ril.proatc] +CSQ: 22,99
+2023-01-18 09:07:59.5828 [I]-[ril.proatc] OK
+2023-01-18 09:07:59.5859 [I]-[ril.sendat] AT+CESQ
+2023-01-18 09:07:59.6103 [I]-[ril.proatc] +CESQ: 99,99,255,255,10,40
+2023-01-18 09:07:59.6136 [I]-[ril.proatc] OK
+2023-01-18 09:08:00.3564 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:01.3772 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:02.3762 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:03.3758 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:04.3974 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:05.3986 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:06.4136 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:07.4140 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:08.4333 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:09.4365 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:10.4335 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:11.4585 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:12.4538 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:13.4489 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:14.4536 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:15.4584 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:16.4583 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:17.4634 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:18.4686 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:19.4740 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:20.4831 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:21.4791 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:22.4842 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:23.4985 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:24.4933 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:25.5045 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:26.4990 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:27.5044 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:27.7234 
+2023-01-18 09:08:27.7244 +CREG: 1,"6356","0949006a",7
+2023-01-18 09:08:27.7254 [I]-[ril.proatc] +CREG: 1,"6356","0949006a",7
+2023-01-18 09:08:27.7264 [I]-[net.creg1] 4 +CEREG: 
+2023-01-18 09:08:27.7286 [I]-[ril.sendat] AT+CSQ
+2023-01-18 09:08:27.7306 
+2023-01-18 09:08:27.7313 +CEREG: 1,"6356","0949006a",7
+2023-01-18 09:08:27.7323 [I]-[ril.proatc] +CEREG: 1,"6356","0949006a",7
+2023-01-18 09:08:27.7333 [I]-[net.creg1] 4 +CEREG: 
+2023-01-18 09:08:27.7353 [I]-[net.creg7] 1 7
+2023-01-18 09:08:27.7363 [I]-[net.UpdNetMode] nil 4 17 17
+2023-01-18 09:08:27.7625 [I]-[ril.proatc] +CSQ: 22,99
+2023-01-18 09:08:27.7650 [I]-[ril.proatc] OK
+2023-01-18 09:08:27.7670 [I]-[ril.sendat] AT+CESQ
+2023-01-18 09:08:27.7934 [I]-[ril.proatc] +CESQ: 99,99,255,255,8,40
+2023-01-18 09:08:27.7964 [I]-[ril.proatc] OK
+2023-01-18 09:08:27.7996 [I]-[ril.sendat] AT+CSQ
+2023-01-18 09:08:27.8279 
+2023-01-18 09:08:27.8293 +CREG: 1,"6356","0c5c2229",7
+2023-01-18 09:08:27.8512 [I]-[ril.proatc] +CREG: 1,"6356","0c5c2229",7
+2023-01-18 09:08:27.8522 [I]-[net.creg1] 4 +CEREG: 
+2023-01-18 09:08:27.8862 
+2023-01-18 09:08:27.8872 +CEREG: 1,"6356","0c5c2229",7
+2023-01-18 09:08:27.8892 [I]-[ril.proatc] +CEREG: 1,"6356","0c5c2229",7
+2023-01-18 09:08:27.8902 [I]-[net.creg1] 4 +CEREG: 
+2023-01-18 09:08:27.8912 [I]-[net.creg7] 1 7
+2023-01-18 09:08:27.8932 [I]-[net.UpdNetMode] nil 4 17 17
+2023-01-18 09:08:27.9193 [I]-[ril.proatc] +CSQ: 22,99
+2023-01-18 09:08:27.9213 [I]-[ril.proatc] OK
+2023-01-18 09:08:27.9243 [I]-[ril.sendat] AT+CESQ
+2023-01-18 09:08:27.9478 [I]-[ril.proatc] +CESQ: 99,99,255,255,8,40
+2023-01-18 09:08:27.9521 [I]-[ril.proatc] OK
+2023-01-18 09:08:27.9552 [I]-[ril.sendat] AT+CSQ
+2023-01-18 09:08:27.9790 [I]-[ril.proatc] +CSQ: 22,99
+2023-01-18 09:08:27.9835 [I]-[ril.proatc] OK
+2023-01-18 09:08:27.9865 [I]-[ril.sendat] AT+CESQ
+2023-01-18 09:08:28.0114 [I]-[ril.proatc] +CESQ: 99,99,255,255,8,40
+2023-01-18 09:08:28.0135 [I]-[ril.proatc] OK
+2023-01-18 09:08:28.0165 [I]-[ril.sendat] AT+CSQ
+2023-01-18 09:08:28.0389 [I]-[ril.proatc] +CSQ: 22,99
+2023-01-18 09:08:28.0444 [I]-[ril.proatc] OK
+2023-01-18 09:08:28.0472 [I]-[ril.sendat] AT+CESQ
+2023-01-18 09:08:28.0732 [I]-[ril.proatc] +CESQ: 99,99,255,255,8,40
+2023-01-18 09:08:28.0753 [I]-[ril.proatc] OK
+2023-01-18 09:08:28.5114 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:29.5166 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:30.5098 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:31.5294 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:32.5296 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:33.5375 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:34.5398 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:35.5387 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:36.5505 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:37.5616 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:38.5684 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:39.5703 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:40.5783 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:41.5901 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:42.5991 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:43.6106 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:44.6111 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:45.6199 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:46.6313 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:47.6405 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:48.6405 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:49.6512 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:50.6612 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:51.6591 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:52.6707 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:53.6738 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:54.6819 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:55.6805 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:56.6990 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:57.6989 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:58.7006 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:08:59.7114 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:00.7215 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:01.7197 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:01.8309 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:02.7205 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:03.7314 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:04.7315 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:05.7412 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:06.7413 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:07.7395 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:08.7509 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:09.7515 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:10.7606 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:11.7618 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:12.7611 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:13.7703 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:14.7710 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:15.7816 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:16.7802 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:17.7810 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:18.7919 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:19.7922 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:20.8021 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:21.8289 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:22.8294 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:23.8319 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:24.8322 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:25.8411 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:26.8532 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:27.8614 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:28.8620 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:29.9424 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:30.9514 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:31.9521 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:32.9622 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:33.9717 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:34.9720 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:35.9810 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:36.9829 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:37.9821 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:38.9939 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:40.0021 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:41.0058 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:42.0128 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:43.0220 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:44.0323 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:45.0421 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:46.0426 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:47.0427 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:48.0531 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:49.0532 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:50.0619 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:51.0618 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:52.0627 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:53.0737 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:54.0732 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:55.0829 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:56.0828 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:57.0838 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:58.0926 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:09:59.0942 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:10:00.1036 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:10:01.1040 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:10:02.1034 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:10:03.1147 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:10:04.1145 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:10:05.1159 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:10:06.1358 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:10:07.1326 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:10:08.1446 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:10:09.1541 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:10:10.1650 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:10:11.1634 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:10:12.1738 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:10:13.1846 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:10:14.1935 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:10:15.1950 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:10:16.2048 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:10:17.2139 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:10:18.2134 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:10:19.2247 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:10:20.2344 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:10:21.2351 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:10:22.2350 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:10:23.2446 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:10:24.2450 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:10:25.2562 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:10:26.2640 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:10:27.2745 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:10:28.2746 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:10:29.2845 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:10:30.2944 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:10:31.2948 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:10:32.3053 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:10:33.3065 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:10:34.3159 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 09:10:35.3162 [I]-[socket:on_response:] 1 SOCKET_SEND 0

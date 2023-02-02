@@ -1,0 +1,249 @@
+2023-01-18 14:43:42.5009 AT+LUATCONSOLE=1
+2023-01-18 14:43:42.5009 
+2023-01-18 14:43:42.5039 ATI
+2023-01-18 14:43:42.5039 
+2023-01-18 14:43:42.5049 LuatOS-Air_V4018_RDA8910
+2023-01-18 14:43:42.5059 
+2023-01-18 14:43:42.5059 OK
+2023-01-18 14:43:42.5069 AT+LUACHECKSUM=c852fd9f0273b102bd4cddb96290f9a9
+2023-01-18 14:43:42.5089 
+2023-01-18 14:43:42.5089 +LUACHECKSUM: 0
+2023-01-18 14:43:42.5099 
+2023-01-18 14:43:42.5099 OK
+2023-01-18 14:43:52.6321 AT+LUATCONSOLE=1
+2023-01-18 14:43:52.6321 
+2023-01-18 14:43:55.5079 
+2023-01-18 14:43:55.5079 +CPIN: READY
+2023-01-18 14:43:55.5099 
+2023-01-18 14:43:55.5104 ^CARDMODE: 2
+2023-01-18 14:43:57.1241 > [I]-[poweron reason:] 3 FTP 2.0.0 2.4.3 LuatOS-Air_V4018_RDA8910
+2023-01-18 14:43:57.1258 [I]-[core build time] Oct 14 2022 15:22:25
+2023-01-18 14:43:57.1288 [E]-[coroutine.resume] /lua/patch.lua:105: bad argument #2 to 'oldUartWrite' (string expected, got table)
+2023-01-18 14:43:57.1298 stack traceback:
+2023-01-18 14:43:57.1298 	[C]: in function 'oldUartWrite'
+2023-01-18 14:43:57.1308 	/lua/patch.lua:105: in function 'write'
+2023-01-18 14:43:57.1308 	/lua/main.lua:158: in function </lua/main.lua:148>
+2023-01-18 14:43:57.1329 [I]-[ril.proatc] RDY
+2023-01-18 14:43:57.1348 [I]-[ril.proatc] +CPIN: READY
+2023-01-18 14:43:57.1368 [I]-[ril.proatc] ^CARDMODE: 2
+2023-01-18 14:43:57.1368 [I]-[ril.defurc] ^CARDMODE: 2
+2023-01-18 14:43:57.1399 [I]-[ril.sendat] ATE0
+2023-01-18 14:43:57.1411 [I]-[SIM.subscribe] nil RDY
+2023-01-18 14:43:57.1438 [I]-[ril.proatc] ATE0
+2023-01-18 14:43:57.1448 [I]-[ril.defurc] ATE0
+2023-01-18 14:43:57.1648 [I]-[ril.proatc] OK
+2023-01-18 14:43:57.1668 [I]-[ril.defrsp] ATE0 true OK nil
+2023-01-18 14:43:57.1688 [I]-[ril.sendat] AT+CMEE=0
+2023-01-18 14:43:57.1933 [I]-[ril.proatc] OK
+2023-01-18 14:43:57.1942 [I]-[ril.defrsp] AT+CMEE=0 true OK nil
+2023-01-18 14:43:57.1972 [I]-[ril.sendat] AT+SIMCROSS?
+2023-01-18 14:43:57.2212 [I]-[ril.proatc] +SIMCROSS:0
+2023-01-18 14:43:57.2242 [I]-[ril.proatc] OK
+2023-01-18 14:43:57.2273 [I]-[ril.sendat] AT+COPS?
+2023-01-18 14:43:57.2523 [I]-[ril.proatc] +COPS: 0
+2023-01-18 14:43:57.2533 [I]-[cops] nil nil nil
+2023-01-18 14:43:57.2554 [I]-[ril.proatc] OK
+2023-01-18 14:43:57.2573 [I]-[ril.defrsp] AT+COPS? true OK nil
+2023-01-18 14:43:57.2593 [I]-[ril.sendat] AT+CREG=2
+2023-01-18 14:43:57.2838 [I]-[ril.proatc] OK
+2023-01-18 14:43:57.2858 [I]-[ril.defrsp] AT+CREG=2 true OK nil
+2023-01-18 14:43:57.2883 [I]-[ril.sendat] AT+CGREG=2
+2023-01-18 14:43:57.3123 [I]-[ril.proatc] OK
+2023-01-18 14:43:57.3143 [I]-[ril.defrsp] AT+CGREG=2 true OK nil
+2023-01-18 14:43:57.3163 [I]-[ril.sendat] AT+CEREG=2
+2023-01-18 14:43:57.3403 [I]-[ril.proatc] OK
+2023-01-18 14:43:57.3413 [I]-[ril.defrsp] AT+CEREG=2 true OK nil
+2023-01-18 14:43:57.3433 [I]-[ril.sendat] AT+CREG?
+2023-01-18 14:43:57.3690 [I]-[ril.proatc] +CREG: 2,0,"0000","00000000",0
+2023-01-18 14:43:57.3703 [I]-[net.creg1] 0 +CREG: 
+2023-01-18 14:43:57.3713 [I]-[net.creg7] 0 0
+2023-01-18 14:43:57.3733 [I]-[ril.proatc] OK
+2023-01-18 14:43:57.3753 [I]-[ril.defrsp] AT+CREG? true OK nil
+2023-01-18 14:43:57.3780 [I]-[ril.sendat] AT+CGREG?
+2023-01-18 14:43:57.4030 [I]-[ril.proatc] +CGREG: 2,0,"0000","00000000"
+2023-01-18 14:43:57.4040 [I]-[net.creg1] 0 +CREG: 
+2023-01-18 14:43:57.4050 [I]-[net.creg7] 0 nil
+2023-01-18 14:43:57.4060 [I]-[net.creg9 ignore!!!]
+2023-01-18 14:43:57.4090 [I]-[ril.proatc] OK
+2023-01-18 14:43:57.4100 [I]-[ril.defrsp] AT+CGREG? true OK nil
+2023-01-18 14:43:57.4120 [I]-[ril.sendat] AT+CEREG?
+2023-01-18 14:43:57.4380 [I]-[ril.proatc] +CEREG: 2,0,"0000","00000000",0,0,0
+2023-01-18 14:43:57.4390 [I]-[net.creg1] 0 +CREG: 
+2023-01-18 14:43:57.4401 [W]-[net.creg1] no match +CEREG: 2,0,"0000","00000000",0,0,0
+2023-01-18 14:43:57.4420 [I]-[ril.proatc] OK
+2023-01-18 14:43:57.4440 [I]-[ril.defrsp] AT+CEREG? true OK nil
+2023-01-18 14:43:57.4460 [I]-[ril.sendat] AT+CALIBINFO?
+2023-01-18 14:43:57.4710 [I]-[ril.proatc] GSM_CALIBINFO: GSM_afc:0, GSM850_agc:0, GSM850_apc:0, GSM900_agc:0, GSM900_apc:0, DCS1800_agc:0,DCS1800_apc:0,
+2023-01-18 14:43:57.4720  PCS1900_agc:0, PCS1900_apc:0, GSM_FT:0, GSM_ANT:0 
+2023-01-18 14:43:57.4745 [I]-[ril.proatc] LTE_CALIBINFO: LTE_afc:1, LTE_TDD_agc:1, LTE_TDD_apc:1, LTE_FDD_agc:1, LTE_FDD_apc:1, FINAL_LTE:1, ANT_LTE:0
+2023-01-18 14:43:57.4770 [I]-[ril.proatc] OK
+2023-01-18 14:43:57.4800 [I]-[ril.sendat] AT*BAND?
+2023-01-18 14:43:57.5043 [I]-[ril.proatc] ERROR
+2023-01-18 14:43:57.5060 [I]-[ril.defrsp] AT*BAND? false ERROR nil
+2023-01-18 14:43:57.5080 [I]-[ril.sendat] AT+EEMOPT=1
+2023-01-18 14:43:57.5330 [I]-[ril.proatc] OK
+2023-01-18 14:43:57.5365 [I]-[ril.sendat] AT+CIND=1
+2023-01-18 14:43:57.5600 [I]-[ril.proatc] OK
+2023-01-18 14:43:57.5630 [I]-[ril.sendat] AT+WISN?
+2023-01-18 14:43:57.5881 [I]-[ril.proatc] 20609071256585
+2023-01-18 14:43:57.5900 [I]-[ril.proatc] OK
+2023-01-18 14:43:57.5940 [I]-[ril.sendat] AT+CGSN
+2023-01-18 14:43:57.6185 [I]-[ril.proatc] 866250069439960
+2023-01-18 14:43:57.6210 [I]-[ril.proatc] OK
+2023-01-18 14:43:57.6240 [I]-[ril.sendat] AT+MUID?
+2023-01-18 14:43:57.6480 [I]-[ril.proatc] +MUID: 20220831054641A724461A2912117735
+2023-01-18 14:43:57.6510 [I]-[ril.proatc] OK
+2023-01-18 14:43:57.6540 [I]-[ril.sendat] AT*EXINFO?
+2023-01-18 14:43:57.6780 [I]-[ril.proatc] *EXINFO:poweron=3
+2023-01-18 14:43:57.6790 [I]-[ril.defurc] *EXINFO:poweron=3
+2023-01-18 14:43:57.6821 [I]-[ril.proatc] OK
+2023-01-18 14:43:57.6840 [I]-[ril.defrsp] AT*EXINFO? true OK nil
+2023-01-18 14:43:57.6860 [I]-[ril.sendat] AT+CGMM
+2023-01-18 14:43:57.7100 [I]-[ril.proatc] +CGMM: "Air724UG"
+2023-01-18 14:43:57.7130 [I]-[ril.proatc] OK
+2023-01-18 14:43:57.7167 [I]-[ril.sendat] AT+RNDISCALL=0,1
+2023-01-18 14:43:57.7430 [I]-[ril.proatc] OK
+2023-01-18 14:43:57.7450 [I]-[ril.defrsp] AT+RNDISCALL=0,1 true OK nil
+2023-01-18 14:43:57.7470 [I]-[ril.sendat] AT+ICCID
+2023-01-18 14:43:57.8519 
+2023-01-18 14:43:57.8519 +CREG: 1,"6356","02e63481",7
+2023-01-18 14:43:57.8539 
+2023-01-18 14:43:57.8539 ^MODE: 17,17
+2023-01-18 14:43:57.8539 
+2023-01-18 14:43:57.8539 
+2023-01-18 14:43:57.8549 +CEREG: 1,"6356","02e63481",7
+2023-01-18 14:43:57.8773 
+2023-01-18 14:43:57.8773 *CGEV: ACT,5,"cmiot.mnc004.mcc460.gprs","10.190.163.11"
+2023-01-18 14:43:57.9153 
+2023-01-18 14:43:57.9163 +NITZ: 23/01/18,06:43:56+32,0
+2023-01-18 14:43:59.2208 
+2023-01-18 14:43:59.2208 SMS READY
+2023-01-18 14:43:59.2470 [I]-[ril.proatc] +ICCID: 898607B1192170016603
+2023-01-18 14:43:59.2500 [I]-[ril.proatc] OK
+2023-01-18 14:43:59.2530 [I]-[ril.sendat] AT+CIMI
+2023-01-18 14:43:59.2560 [I]-[ril.proatc] +CREG: 1,"6356","02e63481",7
+2023-01-18 14:43:59.2570 [I]-[net.creg1] 0 +CREG: 
+2023-01-18 14:43:59.2581 [I]-[net.creg7] 1 7
+2023-01-18 14:43:59.2600 [I]-[net.UpdNetMode] nil 0 17 17
+2023-01-18 14:43:59.2610 [I]-[net.NET_UPD_NET_MODE] 4
+2023-01-18 14:43:59.2630 [I]-[ril.proatc] ^MODE: 17,17
+2023-01-18 14:43:59.2640 [I]-[net.UpdNetMode] nil 4 17 17
+2023-01-18 14:43:59.2660 [I]-[ril.proatc] +CEREG: 1,"6356","02e63481",7
+2023-01-18 14:43:59.2670 [I]-[net.creg1] 4 +CEREG: 
+2023-01-18 14:43:59.2680 [I]-[net.creg7] 1 7
+2023-01-18 14:43:59.2690 [I]-[net.UpdNetMode] nil 4 17 17
+2023-01-18 14:43:59.2710 [I]-[ril.proatc] *CGEV: ACT,5,"cmiot.mnc004.mcc460.gprs","10.190.163.11"
+2023-01-18 14:43:59.2720 [I]-[link.cgevurc] *CGEV: ACT,5,"cmiot.mnc004.mcc460.gprs","10.190.163.11"
+2023-01-18 14:43:59.2731 [I]-[ril.proatc] +NITZ: 23/01/18,06:43:56+32,0
+2023-01-18 14:43:59.2750 [I]-[ril.proatc] SMS READY
+2023-01-18 14:43:59.2760 [I]-[ril.defurc] SMS READY
+2023-01-18 14:43:59.2770 [I]-[link.Pdp_Act] false 4 nil
+2023-01-18 14:43:59.3361 [I]-[ril.proatc] 460041147326555
+2023-01-18 14:43:59.3390 [I]-[ril.proatc] OK
+2023-01-18 14:43:59.3425 [I]-[ril.sendat] AT+CSQ
+2023-01-18 14:43:59.3681 [I]-[ril.proatc] +CSQ: 23,99
+2023-01-18 14:43:59.3711 [I]-[ril.proatc] OK
+2023-01-18 14:43:59.3741 [I]-[ril.sendat] AT+CESQ
+2023-01-18 14:43:59.3991 [I]-[ril.proatc] +CESQ: 99,99,255,255,8,42
+2023-01-18 14:43:59.4021 [I]-[ril.proatc] OK
+2023-01-18 14:43:59.4051 [I]-[ril.sendat] AT+CSQ
+2023-01-18 14:43:59.4311 [I]-[ril.proatc] +CSQ: 23,99
+2023-01-18 14:43:59.4331 [I]-[ril.proatc] OK
+2023-01-18 14:43:59.4371 [I]-[ril.sendat] AT+CESQ
+2023-01-18 14:43:59.4621 [I]-[ril.proatc] +CESQ: 99,99,255,255,8,42
+2023-01-18 14:43:59.4641 [I]-[ril.proatc] OK
+2023-01-18 14:43:59.4681 [I]-[ril.sendat] AT+CSQ
+2023-01-18 14:43:59.4946 [I]-[ril.proatc] +CSQ: 23,99
+2023-01-18 14:43:59.4972 [I]-[ril.proatc] OK
+2023-01-18 14:43:59.5004 [I]-[ril.sendat] AT+CESQ
+2023-01-18 14:43:59.5250 [I]-[ril.proatc] +CESQ: 99,99,255,255,8,42
+2023-01-18 14:43:59.5280 [I]-[ril.proatc] OK
+2023-01-18 14:43:59.5310 [I]-[ril.sendat] AT+CSQ
+2023-01-18 14:43:59.5570 [I]-[ril.proatc] +CSQ: 23,99
+2023-01-18 14:43:59.5592 [I]-[ril.proatc] OK
+2023-01-18 14:43:59.5630 [I]-[ril.sendat] AT+CESQ
+2023-01-18 14:43:59.5881 [I]-[ril.proatc] +CESQ: 99,99,255,255,8,42
+2023-01-18 14:43:59.5901 [I]-[ril.proatc] OK
+2023-01-18 14:43:59.5931 [I]-[ril.sendat] AT+EEMGINFO?
+2023-01-18 14:43:59.6181 [I]-[ril.proatc] +EEMGINFO: 3, 2
+2023-01-18 14:43:59.6191 [I]-[ril.defurc] +EEMGINFO: 3, 2
+2023-01-18 14:43:59.6221 [I]-[ril.proatc] OK
+2023-01-18 14:43:59.6241 [I]-[ril.defrsp] AT+EEMGINFO? true OK nil
+2023-01-18 14:43:59.6262 [I]-[ril.sendat] AT+COPS?
+2023-01-18 14:43:59.8480 [I]-[ril.proatc] +COPS: 0,2,"46000",7
+2023-01-18 14:43:59.8490 [I]-[cops] 2 46000 nil
+2023-01-18 14:43:59.8520 [I]-[ril.proatc] OK
+2023-01-18 14:43:59.8540 [I]-[ril.defrsp] AT+COPS? true OK nil
+2023-01-18 14:43:59.8560 [I]-[ril.sendat] AT+CEREG?
+2023-01-18 14:43:59.8811 [I]-[ril.proatc] +CEREG: 2,1,"6356","02e63481",7
+2023-01-18 14:43:59.8820 [I]-[net.creg1] 4 +CEREG: 
+2023-01-18 14:43:59.8830 [I]-[net.creg7] 1 7
+2023-01-18 14:43:59.8840 [I]-[net.UpdNetMode] nil 4 17 17
+2023-01-18 14:43:59.8870 [I]-[ril.proatc] OK
+2023-01-18 14:43:59.8890 [I]-[ril.defrsp] AT+CEREG? true OK nil
+2023-01-18 14:43:59.8911 [I]-[ril.sendat] AT+CSQ
+2023-01-18 14:43:59.9170 [I]-[ril.proatc] +CSQ: 23,99
+2023-01-18 14:43:59.9200 [I]-[ril.proatc] OK
+2023-01-18 14:43:59.9230 [I]-[ril.sendat] AT+CESQ
+2023-01-18 14:43:59.9480 [I]-[ril.proatc] +CESQ: 99,99,255,255,8,42
+2023-01-18 14:43:59.9510 [I]-[ril.proatc] OK
+2023-01-18 14:43:59.9540 [I]-[ril.sendat] AT+CSQ
+2023-01-18 14:43:59.9791 [I]-[ril.proatc] +CSQ: 23,99
+2023-01-18 14:43:59.9821 [I]-[ril.proatc] OK
+2023-01-18 14:43:59.9851 [I]-[ril.sendat] AT+CESQ
+2023-01-18 14:44:00.0101 [I]-[ril.proatc] +CESQ: 99,99,255,255,8,42
+2023-01-18 14:44:00.0131 [I]-[ril.proatc] OK
+2023-01-18 14:44:00.2221 
+2023-01-18 14:44:00.2231 +EEMLTESVC: 1120, 2, 0, 25430, 141, 38544, 38544, 39, 3, 48641153, 2, 43, 10, -4, 43, 10, 43, 10, 65535, 0, 13, 0, 0, 0, 0, 0, 65535, 0, 0, 0
+2023-01-18 14:44:00.2241 [I]-[ril.proatc] +EEMLTESVC: 1120, 2, 0, 25430, 141, 38544, 38544, 39, 3, 48641153, 2, 43, 10, -4, 43, 10, 43, 10, 65535, 0, 13
+2023-01-18 14:44:00.2252 , 0, 0, 0, 0, 0, 65535, 0, 0, 0
+2023-01-18 14:44:00.2281 [I]-[eemLteSvc1] 25430 48641153  1120 0
+2023-01-18 14:44:00.2315 
+2023-01-18 14:44:00.2321 +EEMLTEINTRA:0,0,215,42,13,1120,0,25430,155322217
+2023-01-18 14:44:00.2321 
+2023-01-18 14:44:00.2321 +EEMLTEINTRA:1,0,122,42,13,1120,0,25430,207364649
+2023-01-18 14:44:00.2321 
+2023-01-18 14:44:00.2321 +EEMLTEINTER:0,0,389,40,6,1120,0,25430,207352321
+2023-01-18 14:44:00.2805 [I]-[link.pdpCmdCnf] SET_PDP_4G_WAITAPN true nil nil
+2023-01-18 14:44:01.2845 [I]-[ril.sendat] AT+CGDCONT?
+2023-01-18 14:44:01.3095 [I]-[ril.proatc] +CGDCONT: 5,"IP","cmiot","10.190.163.11",0,0
+2023-01-18 14:44:01.3104 [I]-[link.pdpCmdCnf] AT+CGDCONT? true OK +CGDCONT: 5,"IP","cmiot","10.190.163.11",0,0
+2023-01-18 14:44:01.3114 [I]-[analysis_cgdcont end] +CGDCONT: 5,"IP","cmiot","10.190.163.11",0,0 nil nil
+2023-01-18 14:44:01.3134 [I]-[analysis_cgdcont ] 5 "IP" "cmiot" 10.190.163.11
+2023-01-18 14:44:01.3169 [I]-[ril.proatc] OK
+2023-01-18 14:44:01.3184 [I]-[link.pdpCmdCnf] CONNECT_DELAY true nil nil
+2023-01-18 14:44:01.3194 [I]-[publish IP_READY_IND]
+2023-01-18 14:44:01.3254 [I]-[socket:connect-coreid,prot,addr,port,cert,timeout] 0 UDP cn.ntp.org.cn 123 nil 120
+2023-01-18 14:44:01.5024 [I]-[socket:on_response:] 0 SOCKET_CONNECT 0
+2023-01-18 14:44:01.5044 [I]-[socket:connect: connect ok]
+2023-01-18 14:44:01.5135 [I]-[socket:on_response:] 0 SOCKET_SEND 0
+2023-01-18 14:44:01.6639 [I]-[ril.sendat] AT+CCLK="23/01/18,14:44:01+32"
+2023-01-18 14:44:01.6657 [I]-[socket:sock_close] 0
+2023-01-18 14:44:01.6678 [I]-[socket:on_response:] 0 SOCKET_CLOSE 1
+2023-01-18 14:44:01.6697 [I]-[ntp.timeSync is date:] 2023/1/18,14:44:1
+2023-01-18 14:44:01.7008 [I]-[ril.proatc] OK
+2023-01-18 14:44:02.1368 [I]-[socket:connect-coreid,prot,addr,port,cert,timeout] 0 TCP 103.46.128.49 17353 nil 120
+2023-01-18 14:44:02.1898 [I]-[socket:on_response:] 0 SOCKET_CONNECT 0
+2023-01-18 14:44:02.1918 [I]-[socket:connect: connect ok]
+2023-01-18 14:44:04.4958 
+2023-01-18 14:44:04.4958 +CREG: 1,"6356","0c5c2207",7
+2023-01-18 14:44:04.4975 [I]-[ril.proatc] +CREG: 1,"6356","0c5c2207",7
+2023-01-18 14:44:04.4995 [I]-[net.creg1] 4 +CEREG: 
+2023-01-18 14:44:04.5020 [I]-[ril.sendat] AT+CSQ
+2023-01-18 14:44:04.5046 
+2023-01-18 14:44:04.5055 +CEREG: 1,"6356","0c5c2207",7
+2023-01-18 14:44:04.5065 [I]-[ril.proatc] +CEREG: 1,"6356","0c5c2207",7
+2023-01-18 14:44:04.5075 [I]-[net.creg1] 4 +CEREG: 
+2023-01-18 14:44:04.5095 [I]-[net.creg7] 1 7
+2023-01-18 14:44:04.5105 [I]-[net.UpdNetMode] nil 4 17 17
+2023-01-18 14:44:04.5361 [I]-[ril.proatc] +CSQ: 22,99
+2023-01-18 14:44:04.5382 [I]-[ril.proatc] OK
+2023-01-18 14:44:04.5421 [I]-[ril.sendat] AT+CESQ
+2023-01-18 14:44:04.5666 [I]-[ril.proatc] +CESQ: 99,99,255,255,23,47
+2023-01-18 14:44:04.5696 [I]-[ril.proatc] OK
+2023-01-18 14:44:04.5726 [I]-[ril.sendat] AT+CSQ
+2023-01-18 14:44:04.5996 [I]-[ril.proatc] +CSQ: 22,99
+2023-01-18 14:44:04.6026 [I]-[ril.proatc] OK
+2023-01-18 14:44:04.6057 [I]-[ril.sendat] AT+CESQ
+2023-01-18 14:44:04.6307 [I]-[ril.proatc] +CESQ: 99,99,255,255,23,47
+2023-01-18 14:44:04.6336 [I]-[ril.proatc] OK

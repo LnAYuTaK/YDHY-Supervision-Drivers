@@ -37,6 +37,9 @@
 #include "MeteringDrivers.h"
 #include "adc.h"
 #include "string.h"
+#include "gpio.h"
+#include "config.h"
+#include "timers.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -70,6 +73,8 @@ osThreadId defaultTaskHandle;
 osThreadId myTask02Handle;
 
 osThreadId drvRecvHandle; 
+
+TimerHandle_t uploadTimer;
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -118,13 +123,21 @@ void MX_FREERTOS_Init(void) {
   osThreadDef(drvRecvTask, StartDrvRecvTask, osPriorityNormal, 0, 190);
   drvRecvHandle = osThreadCreate(osThread(drvRecvTask), NULL);
   DriversMsgHandle = osMessageCreate(osMessageQ(DriversQueue),drvRecvHandle);
+
+  //消抖定时器初始化
+  // uploadTimer =   xTimerCreate( "uploadTimerSelect",
+  //                 pdMS_TO_TICKS( 10 ),
+  //                 pdFALSE,
+  //                 (void *) 0,
+  //                 vTimerCallback);
+
   taskEXIT_CRITICAL(); //关闭临界区
   /* USER CODE END RTOS_THREADS */
 }
 
 /* USER CODE BEGIN Header_StartDefaultTask */
 /**
-  * @brief  Function implementing the defaultTask thread.
+  * @brief  接收gps信号解码打包协议串口转发
   * @param  argument: Not used
   * @retval None
   */
@@ -144,8 +157,10 @@ void StartDefaultTask(void const * argument)
         Gps_Msg_t* gpsmeg = (Gps_Msg_t*)evt.value.p;
         MeterMsg_t* drvmsg = (MeterMsg_t*)evt2.value.p;
         //判断下gps数据有效性 
+        // #ifndef GPS_DATA_FILTER_DISABLED
         // if(CheckGpsState(gpsmeg)!= PACK_ERROR)
-        //{
+        // {
+        // #endif
           //协议打包                                                                                                                                                                                            
           Pack_t *pack = MakePack(gpsmeg,drvmsg);                                                                                     
           //发送给4G模块
@@ -153,7 +168,9 @@ void StartDefaultTask(void const * argument)
           RecvFlag = 0;
           free(pack);
           pack = NULL;
-        //}
+        // #ifndef GPS_DATA_FILTER_DISABLED
+        // }
+        // #endif
       }
     }
   }
@@ -169,8 +186,7 @@ void StartDefaultTask(void const * argument)
 /* USER CODE END Header_StartTask02 */
 void StartTask02(void const * argument)
 {
-  //状态灯显示
-  //任务调试DEBUG
+  //初始化LED 状态灯系统
   ledDriverInit();
   for(;;)
   { 
@@ -199,16 +215,22 @@ void StartDrvRecvTask(void const * argument)
     msg.flowMeter2 = (uint16_t)(htim2.Instance->CNT);
     msg.flowMeter3 = (uint16_t)(htim3.Instance->CNT);
     msg.flowMeter4 = (uint16_t)(htim8.Instance->CNT);
+    #ifndef FlowMeter_DEBUG_DISABLED
+    printf("FlowMeter1: %hd\n",msg.flowMeter1);
+    printf("FlowMeter2: %hd\n",msg.flowMeter2);
+    printf("FlowMeter3: %hd\n",msg.flowMeter3);
+    printf("FlowMeter4: %hd\n",msg.flowMeter4);
+    #endif 
     msg.PressureGage1  = AD_Buf[0];
     msg.PressureGage2  = AD_Buf[1];
     msg.PressureGage3  = AD_Buf[2];
     msg.PressureGage4  = AD_Buf[3];
-
-    // printf("AD1: %d\n",msg.PressureGage1);
-    // printf("AD2: %d\n",msg.PressureGage2);
-    // printf("AD3: %d\n",msg.PressureGage3);
-    // printf("AD4: %d\n",msg.PressureGage4);
-  
+    #ifndef PressureGage_DEBUG_DISABLED
+    printf("PressureGage1: %d\n",msg.PressureGage1);
+    printf("PressureGage2: %d\n",msg.PressureGage2);
+    printf("PressureGage3: %d\n",msg.PressureGage3);
+    printf("PressureGage4: %d\n",msg.PressureGage4);
+    #endif
     htim1.Instance->CNT = 0;
     htim2.Instance->CNT = 0;
     htim3.Instance->CNT = 0;
@@ -219,6 +241,5 @@ void StartDrvRecvTask(void const * argument)
 }
 /* Private application code --------------------------------------------------*/
 /* USER CODE BEGIN Application */
-
 /* USER CODE END Application */
 

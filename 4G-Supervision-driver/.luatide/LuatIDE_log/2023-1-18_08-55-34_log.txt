@@ -1,0 +1,435 @@
+2023-01-18 08:55:37.3027 AT+LUATCONSOLE=1
+2023-01-18 08:55:37.3036 
+2023-01-18 08:55:37.3046 ATI
+2023-01-18 08:55:37.3056 
+2023-01-18 08:55:37.3056 LuatOS-Air_V4018_RDA8910
+2023-01-18 08:55:37.3066 
+2023-01-18 08:55:37.3066 OK
+2023-01-18 08:55:37.3076 AT+LUACHECKSUM=d98299c46940fe23f95198c0e1593d48
+2023-01-18 08:55:37.3106 
+2023-01-18 08:55:37.3106 +LUACHECKSUM: 0
+2023-01-18 08:55:37.3106 
+2023-01-18 08:55:37.3116 OK
+2023-01-18 08:55:47.3612 AT+LUATCONSOLE=1
+2023-01-18 08:55:47.3621 
+2023-01-18 08:55:50.2293 
+2023-01-18 08:55:50.2293 +CPIN: READY
+2023-01-18 08:55:50.2303 
+2023-01-18 08:55:50.2313 ^CARDMODE: 2
+2023-01-18 08:55:52.4716 > [I]-[poweron reason:] 3 FTP 2.0.0 2.4.3 LuatOS-Air_V4018_RDA8910
+2023-01-18 08:55:52.4736 [I]-[core build time] Oct 14 2022 15:22:25
+2023-01-18 08:55:52.4768 [I]-[ril.proatc] RDY
+2023-01-18 08:55:52.4786 [I]-[ril.proatc] +CPIN: READY
+2023-01-18 08:55:52.4809 [I]-[ril.proatc] ^CARDMODE: 2
+2023-01-18 08:55:52.4818 [I]-[ril.defurc] ^CARDMODE: 2
+2023-01-18 08:55:52.4836 [I]-[ril.sendat] ATE0
+2023-01-18 08:55:52.4856 [I]-[SIM.subscribe] nil RDY
+2023-01-18 08:55:52.4885 [I]-[ril.proatc] ATE0
+2023-01-18 08:55:52.4892 [I]-[ril.defurc] ATE0
+2023-01-18 08:55:52.5094 [I]-[ril.proatc] OK
+2023-01-18 08:55:52.5114 [I]-[ril.defrsp] ATE0 true OK nil
+2023-01-18 08:55:52.5134 [I]-[ril.sendat] AT+CMEE=0
+2023-01-18 08:55:52.5374 [I]-[ril.proatc] OK
+2023-01-18 08:55:52.5391 [I]-[ril.defrsp] AT+CMEE=0 true OK nil
+2023-01-18 08:55:52.5411 [I]-[ril.sendat] AT+SIMCROSS?
+2023-01-18 08:55:52.5461 
+2023-01-18 08:55:52.5461 ^MODE: 17,17
+2023-01-18 08:55:52.5461 
+2023-01-18 08:55:52.5481 [I]-[ril.proatc] ^MODE: 17,17
+2023-01-18 08:55:52.5491 [I]-[net.UpdNetMode] nil 0 17 17
+2023-01-18 08:55:52.5501 [I]-[net.NET_UPD_NET_MODE] 4
+2023-01-18 08:55:52.5628 
+2023-01-18 08:55:52.5628 *CGEV: ACT,5,"cmiot.mnc004.mcc460.gprs","10.187.3.24"
+2023-01-18 08:55:52.5648 [I]-[ril.proatc] *CGEV: ACT,5,"cmiot.mnc004.mcc460.gprs","10.187.3.24"
+2023-01-18 08:55:52.5658 [I]-[link.cgevurc] *CGEV: ACT,5,"cmiot.mnc004.mcc460.gprs","10.187.3.24"
+2023-01-18 08:55:52.6114 
+2023-01-18 08:55:52.6114 +NITZ: 23/01/18,00:55:52+32,0
+2023-01-18 08:55:52.6134 [I]-[ril.proatc] +SIMCROSS:0
+2023-01-18 08:55:52.6154 [I]-[ril.proatc] OK
+2023-01-18 08:55:52.6184 [I]-[ril.sendat] AT+COPS?
+2023-01-18 08:55:52.6214 [I]-[ril.proatc] +NITZ: 23/01/18,00:55:52+32,0
+2023-01-18 08:55:53.9450 
+2023-01-18 08:55:53.9450 SMS READY
+2023-01-18 08:55:54.1344 [I]-[ril.proatc] +COPS: 0,2,"46000",7
+2023-01-18 08:55:54.1354 [I]-[cops] 2 46000 nil
+2023-01-18 08:55:54.1390 [I]-[ril.proatc] OK
+2023-01-18 08:55:54.1404 [I]-[ril.defrsp] AT+COPS? true OK nil
+2023-01-18 08:55:54.1426 [I]-[ril.sendat] AT+CREG=2
+2023-01-18 08:55:54.1454 [I]-[ril.proatc] SMS READY
+2023-01-18 08:55:54.1464 [I]-[ril.defurc] SMS READY
+2023-01-18 08:55:54.1714 [I]-[ril.proatc] OK
+2023-01-18 08:55:54.1724 [I]-[ril.defrsp] AT+CREG=2 true OK nil
+2023-01-18 08:55:54.1754 [I]-[ril.sendat] AT+CGREG=2
+2023-01-18 08:55:54.1995 [I]-[ril.proatc] OK
+2023-01-18 08:55:54.2004 [I]-[ril.defrsp] AT+CGREG=2 true OK nil
+2023-01-18 08:55:54.2034 [I]-[ril.sendat] AT+CEREG=2
+2023-01-18 08:55:54.2274 [I]-[ril.proatc] OK
+2023-01-18 08:55:54.2284 [I]-[ril.defrsp] AT+CEREG=2 true OK nil
+2023-01-18 08:55:54.2314 [I]-[ril.sendat] AT+CREG?
+2023-01-18 08:55:54.2565 [I]-[ril.proatc] +CREG: 2,1,"6356","0c9b1404",7
+2023-01-18 08:55:54.2574 [I]-[net.creg1] 4 +CEREG: 
+2023-01-18 08:55:54.2606 [I]-[ril.proatc] OK
+2023-01-18 08:55:54.2624 [I]-[ril.defrsp] AT+CREG? true OK nil
+2023-01-18 08:55:54.2645 [I]-[ril.sendat] AT+CGREG?
+2023-01-18 08:55:54.2894 [I]-[ril.proatc] +CGREG: 2,1,"6356","0C9B1404"
+2023-01-18 08:55:54.2904 [I]-[net.creg1] 4 +CEREG: 
+2023-01-18 08:55:54.2937 [I]-[ril.proatc] OK
+2023-01-18 08:55:54.2954 [I]-[ril.defrsp] AT+CGREG? true OK nil
+2023-01-18 08:55:54.2977 [I]-[ril.sendat] AT+CEREG?
+2023-01-18 08:55:54.3224 [I]-[ril.proatc] +CEREG: 2,1,"6356","0c9b1404",7
+2023-01-18 08:55:54.3236 [I]-[net.creg1] 4 +CEREG: 
+2023-01-18 08:55:54.3251 [I]-[net.creg7] 1 7
+2023-01-18 08:55:54.3264 [I]-[net.UpdNetMode] nil 4 17 17
+2023-01-18 08:55:54.3286 [I]-[link.Pdp_Act] false 4 nil
+2023-01-18 08:55:54.3324 [I]-[ril.proatc] OK
+2023-01-18 08:55:54.3345 [I]-[ril.defrsp] AT+CEREG? true OK nil
+2023-01-18 08:55:54.3364 [I]-[ril.sendat] AT+CALIBINFO?
+2023-01-18 08:55:54.3624 [I]-[ril.proatc] GSM_CALIBINFO: GSM_afc:0, GSM850_agc:0, GSM850_apc:0, GSM900_agc:0, GSM900_apc:0, DCS1800_agc:0,DCS1800_apc:0,
+2023-01-18 08:55:54.3624  PCS1900_agc:0, PCS1900_apc:0, GSM_FT:0, GSM_ANT:0 
+2023-01-18 08:55:54.3654 [I]-[ril.proatc] LTE_CALIBINFO: LTE_afc:1, LTE_TDD_agc:1, LTE_TDD_apc:1, LTE_FDD_agc:1, LTE_FDD_apc:1, FINAL_LTE:1, ANT_LTE:0
+2023-01-18 08:55:54.3674 [I]-[ril.proatc] OK
+2023-01-18 08:55:54.3714 [I]-[ril.sendat] AT*BAND?
+2023-01-18 08:55:54.3954 [I]-[ril.proatc] ERROR
+2023-01-18 08:55:54.3974 [I]-[ril.defrsp] AT*BAND? false ERROR nil
+2023-01-18 08:55:54.3994 [I]-[ril.sendat] AT+EEMOPT=1
+2023-01-18 08:55:54.4235 [I]-[ril.proatc] OK
+2023-01-18 08:55:54.4274 [I]-[ril.sendat] AT+CIND=1
+2023-01-18 08:55:54.4514 [I]-[ril.proatc] OK
+2023-01-18 08:55:54.4544 [I]-[ril.sendat] AT+WISN?
+2023-01-18 08:55:54.4806 [I]-[ril.proatc] 20609071256585
+2023-01-18 08:55:54.4844 [I]-[ril.proatc] OK
+2023-01-18 08:55:54.4884 [I]-[ril.sendat] AT+CGSN
+2023-01-18 08:55:54.5129 [I]-[ril.proatc] 866250069439960
+2023-01-18 08:55:54.5154 [I]-[ril.proatc] OK
+2023-01-18 08:55:54.5190 [I]-[ril.sendat] AT+MUID?
+2023-01-18 08:55:54.5436 [I]-[ril.proatc] +MUID: 20220831054641A724461A2912117735
+2023-01-18 08:55:54.5454 [I]-[ril.proatc] OK
+2023-01-18 08:55:54.5494 [I]-[ril.sendat] AT*EXINFO?
+2023-01-18 08:55:54.5734 [I]-[ril.proatc] *EXINFO:poweron=3
+2023-01-18 08:55:54.5744 [I]-[ril.defurc] *EXINFO:poweron=3
+2023-01-18 08:55:54.5774 [I]-[ril.proatc] OK
+2023-01-18 08:55:54.5794 [I]-[ril.defrsp] AT*EXINFO? true OK nil
+2023-01-18 08:55:54.5814 [I]-[ril.sendat] AT+CGMM
+2023-01-18 08:55:54.6067 [I]-[ril.proatc] +CGMM: "Air724UG"
+2023-01-18 08:55:54.6084 [I]-[ril.proatc] OK
+2023-01-18 08:55:54.6125 [I]-[ril.sendat] AT+RNDISCALL=0,1
+2023-01-18 08:55:54.6414 [I]-[ril.proatc] OK
+2023-01-18 08:55:54.6434 [I]-[ril.defrsp] AT+RNDISCALL=0,1 true OK nil
+2023-01-18 08:55:54.6444 [I]-[ril.sendat] AT+ICCID
+2023-01-18 08:55:54.7024 [I]-[ril.proatc] +ICCID: 898607B1192170016603
+2023-01-18 08:55:54.7054 [I]-[ril.proatc] OK
+2023-01-18 08:55:54.7084 [I]-[ril.sendat] AT+CIMI
+2023-01-18 08:55:54.7664 [I]-[ril.proatc] 460041147326555
+2023-01-18 08:55:54.7694 [I]-[ril.proatc] OK
+2023-01-18 08:55:54.7724 [I]-[ril.sendat] AT+COPS?
+2023-01-18 08:55:54.9969 [I]-[ril.proatc] +COPS: 0,2,"46000",7
+2023-01-18 08:55:54.9989 [I]-[cops] 2 46000 nil
+2023-01-18 08:55:55.0017 [I]-[ril.proatc] OK
+2023-01-18 08:55:55.0029 [I]-[ril.defrsp] AT+COPS? true OK nil
+2023-01-18 08:55:55.0049 [I]-[ril.sendat] AT+CEREG?
+2023-01-18 08:55:55.0309 [I]-[ril.proatc] +CEREG: 2,1,"6356","0c9b1404",7
+2023-01-18 08:55:55.0329 [I]-[net.creg1] 4 +CEREG: 
+2023-01-18 08:55:55.0339 [I]-[net.creg7] 1 7
+2023-01-18 08:55:55.0349 [I]-[net.UpdNetMode] nil 4 17 17
+2023-01-18 08:55:55.0379 [I]-[ril.proatc] OK
+2023-01-18 08:55:55.0399 [I]-[ril.defrsp] AT+CEREG? true OK nil
+2023-01-18 08:55:55.0419 [I]-[ril.sendat] AT+CSQ
+2023-01-18 08:55:55.0669 [I]-[ril.proatc] +CSQ: 29,99
+2023-01-18 08:55:55.0701 [I]-[ril.proatc] OK
+2023-01-18 08:55:55.0734 [I]-[ril.sendat] AT+CESQ
+2023-01-18 08:55:55.0984 [I]-[ril.proatc] +CESQ: 99,99,255,255,27,61
+2023-01-18 08:55:55.1009 [I]-[ril.proatc] OK
+2023-01-18 08:55:55.1040 [I]-[ril.sendat] AT+CSQ
+2023-01-18 08:55:55.1289 [I]-[ril.proatc] +CSQ: 29,99
+2023-01-18 08:55:55.1319 [I]-[ril.proatc] OK
+2023-01-18 08:55:55.1351 [I]-[ril.sendat] AT+CESQ
+2023-01-18 08:55:55.1603 [I]-[ril.proatc] +CESQ: 99,99,255,255,27,61
+2023-01-18 08:55:55.1629 [I]-[ril.proatc] OK
+2023-01-18 08:55:55.1661 [I]-[ril.sendat] AT+CSQ
+2023-01-18 08:55:55.1909 [I]-[ril.proatc] +CSQ: 29,99
+2023-01-18 08:55:55.1943 [I]-[ril.proatc] OK
+2023-01-18 08:55:55.1976 [I]-[ril.sendat] AT+CESQ
+2023-01-18 08:55:55.2220 [I]-[ril.proatc] +CESQ: 99,99,255,255,27,61
+2023-01-18 08:55:55.2253 [I]-[ril.proatc] OK
+2023-01-18 08:55:55.2279 [I]-[ril.sendat] AT+EEMGINFO?
+2023-01-18 08:55:55.2529 [I]-[ril.proatc] +EEMGINFO: 3, 2
+2023-01-18 08:55:55.2539 [I]-[ril.defurc] +EEMGINFO: 3, 2
+2023-01-18 08:55:55.2569 [I]-[ril.proatc] OK
+2023-01-18 08:55:55.2589 [I]-[ril.defrsp] AT+EEMGINFO? true OK nil
+2023-01-18 08:55:55.2609 [I]-[ril.sendat] AT+CSQ
+2023-01-18 08:55:55.2865 [I]-[ril.proatc] +CSQ: 29,99
+2023-01-18 08:55:55.2889 [I]-[ril.proatc] OK
+2023-01-18 08:55:55.2919 [I]-[ril.sendat] AT+CESQ
+2023-01-18 08:55:55.3169 [I]-[ril.proatc] +CESQ: 99,99,255,255,27,61
+2023-01-18 08:55:55.3199 [I]-[ril.proatc] OK
+2023-01-18 08:55:55.3311 [I]-[link.pdpCmdCnf] SET_PDP_4G_WAITAPN true nil nil
+2023-01-18 08:55:56.3348 [I]-[ril.sendat] AT+CGDCONT?
+2023-01-18 08:55:56.3618 [I]-[ril.proatc] +CGDCONT: 5,"IP","cmiot","10.187.3.24",0,0
+2023-01-18 08:55:56.3628 [I]-[link.pdpCmdCnf] AT+CGDCONT? true OK +CGDCONT: 5,"IP","cmiot","10.187.3.24",0,0
+2023-01-18 08:55:56.3638 [I]-[analysis_cgdcont end] +CGDCONT: 5,"IP","cmiot","10.187.3.24",0,0 nil nil
+2023-01-18 08:55:56.3649 [I]-[analysis_cgdcont ] 5 "IP" "cmiot" 10.187.3.24
+2023-01-18 08:55:56.3678 [I]-[ril.proatc] OK
+2023-01-18 08:55:56.3698 [I]-[link.pdpCmdCnf] CONNECT_DELAY true nil nil
+2023-01-18 08:55:56.3708 [I]-[publish IP_READY_IND]
+2023-01-18 08:55:56.3768 [I]-[socket:connect-coreid,prot,addr,port,cert,timeout] 0 UDP 3.tw.pool.ntp.org 123 nil 120
+2023-01-18 08:55:56.4667 [I]-[socket:on_response:] 0 SOCKET_CONNECT 0
+2023-01-18 08:55:56.4686 [I]-[socket:connect: connect ok]
+2023-01-18 08:55:56.4776 [I]-[socket:on_response:] 0 SOCKET_SEND 0
+2023-01-18 08:55:56.4876 [I]-[socket:connect-coreid,prot,addr,port,cert,timeout] 1 TCP 103.46.128.49 17353 nil 120
+2023-01-18 08:55:56.5906 [I]-[ril.sendat] AT+CCLK="23/01/18,08:55:57+32"
+2023-01-18 08:55:56.5926 [I]-[socket:sock_close] 0
+2023-01-18 08:55:56.5956 [I]-[socket:on_response:] 0 SOCKET_CLOSE 1
+2023-01-18 08:55:56.5966 [I]-[ntp.timeSync is date:] 2023/1/18,8:55:57
+2023-01-18 08:55:56.6006 [I]-[socket:on_response:] 1 SOCKET_CONNECT 0
+2023-01-18 08:55:56.6016 [I]-[socket:connect: connect ok]
+2023-01-18 08:55:56.6336 [I]-[ril.proatc] OK
+2023-01-18 08:55:57.4850 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:55:57.4873 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:55:57.4890 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:55:57.4912 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:55:57.4920 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:55:57.6071 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:55:57.7261 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:55:58.2601 
+2023-01-18 08:55:58.2611 +EEMLTESVC: 1120, 2, 0, 25430, 61, 38950, 38950, 40, 5, 211489796, 2, 61, 29, 31, 61, 29, 61, 29, 65535, 0, 4, 0, 0, 0, 0, 0, 65535, 0, 0, 0
+2023-01-18 08:55:58.2621 [I]-[ril.proatc] +EEMLTESVC: 1120, 2, 0, 25430, 61, 38950, 38950, 40, 5, 211489796, 2, 61, 29, 31, 61, 29, 61, 29, 65535, 0, 4,
+2023-01-18 08:55:58.2631  0, 0, 0, 0, 0, 65535, 0, 0, 0
+2023-01-18 08:55:58.2661 [I]-[eemLteSvc1] 25430 211489796  1120 0
+2023-01-18 08:55:58.2692 
+2023-01-18 08:55:58.2692 +EEMLTEINTRA:0,0,0,0,0,0,0,0,0
+2023-01-18 08:55:58.4981 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:55:58.6171 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:55:59.5031 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:55:59.6271 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:00.5079 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:00.6261 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:01.5136 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:01.6371 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:02.5190 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:02.6369 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:03.5248 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:03.6469 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:04.5256 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:04.6467 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:05.5370 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:05.6564 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:06.5427 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:06.6664 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:07.5474 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:07.6661 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:08.5522 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:08.6779 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:09.5582 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:09.6782 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:10.5628 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:10.6871 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:11.5679 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:11.6875 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:12.5740 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:12.6971 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:13.5785 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:13.6970 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:14.5845 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:14.7071 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:15.5905 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:15.7073 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:16.5958 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:16.7137 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:17.6012 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:17.7268 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:18.6062 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:18.7272 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:19.6119 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:19.7369 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:20.6174 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:20.7367 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:21.6229 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:21.7474 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:22.6281 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:22.7474 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:23.6328 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:23.7577 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:24.6391 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:24.7570 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:25.6449 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:25.7668 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:26.6503 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:26.7683 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:27.6554 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:27.7778 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:28.6612 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:28.7778 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:29.6666 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:29.7875 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:30.6722 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:30.7989 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:31.6773 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:31.7989 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:32.6814 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:32.8085 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:33.6882 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:33.8085 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:34.6931 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:34.8146 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:35.6986 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:35.8176 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:36.7045 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:36.8278 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:37.7091 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:37.8277 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:38.7146 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:38.8376 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:39.7205 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:39.8385 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:40.7260 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:40.8480 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:41.7306 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:41.8485 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:42.7361 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:42.8585 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:43.7429 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:43.8598 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:44.7483 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:44.8683 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:45.7544 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:45.8749 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:46.7593 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:46.8788 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:47.7655 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:47.8887 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:48.7705 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:48.8885 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:49.7763 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:49.8984 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:50.7812 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:50.8987 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:51.7871 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:51.9190 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:52.7923 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:52.9092 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:53.7975 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:53.9175 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:54.8031 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:54.9287 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:55.8081 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:55.9291 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:56.8140 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:56.9406 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:57.8213 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:57.9422 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:58.8267 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:58.9504 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:56:59.8323 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:56:59.9487 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:57:00.8373 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:57:00.9585 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:57:01.8427 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:57:01.9591 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:57:02.8480 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:57:02.9696 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:57:03.8535 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:57:03.9795 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:57:04.8589 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:57:04.9789 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:57:05.8633 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:57:05.9892 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:57:06.8696 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:57:06.9896 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:57:07.8750 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:57:08.0004 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:57:08.8828 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:57:08.9998 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:57:09.8880 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:57:10.0099 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:57:10.8940 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:57:11.0195 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:57:11.8991 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:57:12.0191 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:57:12.9040 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:57:13.0295 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:57:13.9091 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:57:14.0301 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:57:14.9150 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:57:15.0396 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:57:15.9205 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:57:16.0395 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:57:16.9264 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:57:17.0503 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:57:17.9314 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:57:18.0501 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:57:18.9365 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:57:19.0595 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:57:19.9423 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:57:20.0603 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:57:20.9473 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:57:21.0703 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:57:21.9529 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:57:22.0703 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:57:22.9586 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:57:23.0801 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:57:23.9637 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:57:24.0799 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:57:24.9693 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:57:25.0910 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:57:25.9741 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:57:26.0971 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:57:26.9801 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:57:27.1009 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:57:27.9848 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:57:28.1117 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:57:28.9902 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:57:29.1087 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:57:29.9963 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:57:30.1204 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:57:31.0015 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:57:31.1204 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:57:32.0072 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:57:32.1302 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:57:33.0122 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:57:33.1308 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:57:34.0176 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:57:34.1417 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:57:35.0233 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:57:35.1408 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:57:36.0285 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:57:36.1510 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:57:37.0339 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:57:37.1510 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:57:38.0392 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:57:38.1611 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:57:39.0439 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:57:39.1613 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:57:40.0506 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:57:40.1683 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:57:41.0572 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:57:41.1838 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:57:42.0635 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:57:42.1823 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:57:43.0688 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:57:43.1908 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:57:44.0752 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:57:44.1913 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:57:45.0805 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:57:45.2010 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:57:46.0857 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:57:46.2114 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:57:47.0922 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:57:47.2116 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:57:48.0972 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:57:48.2227 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:57:49.1019 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:57:49.2210 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:57:50.1080 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:57:50.2309 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:57:51.1132 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:57:51.2327 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:57:52.1181 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:57:52.2430 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:57:53.1240 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:57:53.2429 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:57:54.1285 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:57:54.2529 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:57:55.1347 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:57:55.2640 [I]-[socket:on_response:] 1 SOCKET_SEND 0
+2023-01-18 08:57:56.1404 lualibc_fopen fail -4200062,0,/20230118.txt
+2023-01-18 08:57:56.2633 [I]-[socket:on_response:] 1 SOCKET_SEND 0

@@ -2,7 +2,6 @@
 #define	__GPS_H
 //负责GPS 解码与写入文件 
 #include "Middlewares\Third_Party\Nmea\include\nmea\nmea.h"
-#include "usart.h"
 #include "main.h"
 #include <stdio.h>
 #include <string.h>
@@ -18,12 +17,10 @@ typedef struct GpsMsg_s
 }Gps_Msg_t;
 
 int GPS_decode();
+
 void DebugStr(const char *str, int str_size);
 
-
 nmeaTIME  TimeStamp2DateTime(uint32_t Stamp);
-
-
 
 uint32_t DateTimeToTimeStamp (unsigned int year, unsigned int mon,
 					unsigned int day, unsigned int hour,

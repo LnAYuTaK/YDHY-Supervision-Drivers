@@ -18,22 +18,17 @@
   */
 #include "stdio.h" 
 #include "string.h"
-/* USER CODE END Header */
-/* Includes ------------------------------------------------------------------*/
 #include "usart.h"
-
-/* USER CODE BEGIN 0 */
 #include "gps.h"
 #include "UserApp.h"
 #include  "ProtocolPack.h"
-
+#include "config.h"
 
 //串口一的 RXbuffer
 char RxBuffer[RXBUFFERSIZE];  //接收数据
 
-
 //串口二的 接收 buffer //主要是接收处理状态显示  不用开太大
-uint8_t RxUart2Buffer[32];
+uint8_t RxUart2Buffer[48];
 
 uint8_t aRxBuffer;			      //接收中断缓冲
 
@@ -424,10 +419,8 @@ void USAR_UART_IDLECallback(UART_HandleTypeDef *huart)
   if(huart->Instance == USART1)
   {
     HAL_UART_DMAStop(&huart1);
-    //uint16_t data_length  = RXBUFFERSIZE - __HAL_DMA_GET_COUNTER(&hdma_usart1_rx);
-    //DEBUG UART MSG
-    //HAL_UART_Transmit(&huart3,(uint8_t *)RxBuffer,sizeof(RxBuffer),0x200);
-    //解码放在中断  NMea解码需要太大的Stack了 放在任务里边跑不起来//后续看情况修改
+    // HAL_UART_Transmit(&huart3,(uint8_t *)RxBuffer,sizeof(RxBuffer),0x200);
+    //解码暂时放在中断  NMea解码需要太大的Stack了 放在任务里边跑不起来//后续看情况修改
     GPS_decode();
     RecvFlag = 1;  
     //清一下中断Buffer
@@ -467,7 +460,5 @@ void USER_UART_IRQHandler(UART_HandleTypeDef *huart)
         }
     }
 }
-
-
 
 /* USER CODE END 1 */

@@ -39,7 +39,10 @@
         "math.h": "c",
         "time.h": "c",
         "stddef.h": "c",
-        "stdbool.h": "c"
+        "stdbool.h": "c",
+        "timers.h": "c",
+        "projdefs.h": "c",
+        "task.h": "c"
     },
     "git.ignoreLimitWarning": true
 }

@@ -1,15 +1,14 @@
 #include "gps.h"
-#include "Config\config.h"
 #include <string.h>
-// #include "fatfs.h"
 #include "UserApp.h"
 #include "time.h"
 #include "math.h"
+#include "config.h"
+#include "usart.h"
 #define EARTH_RADIUS 6378.137//地球半径
 #define PI 3.14159265358979323846 //圆周率
 
-//打印调试GPS
-#ifdef GPS_DEBUG
+//GPS原始数据DEBUG
 void trace(const char *str, int str_size)
 {
     uint16_t i;
@@ -45,13 +44,11 @@ void DebugStr(const char *str, int str_size)
       printf("%c",*(str+i));
     printf("\n");
 }   
-#endif  
 //计算角度
 static double rad(double d)
 {
    return d * PI / 180.0;
 }
-
 //GPS 根据经纬度差值计算距离
 double GetDistance(double lat1, double lng1, double lat2, double lng2)
 {
@@ -65,7 +62,6 @@ double GetDistance(double lat1, double lng1, double lat2, double lng2)
     s = llroundl(s*10000) / 10000.0;
     return s;
 }
-
 //判断闰年
 static uint8_t IsLeapYear(uint8_t iYear) 
 { 
@@ -229,25 +225,26 @@ int GPS_decode()
     nmeaINFO info;          //GPS解码后得到的信息
     nmeaPARSER parser;      //解码时使用的数据结构  
     /* 设置用于输出调试信息的函数 */
-    #ifdef GPS_DEBUG
     // nmea_property()->trace_func = &trace;
     // nmea_property()->error_func = &error;
     // nmea_property()->info_func = &gps_info;
-    #endif
+
     /* 初始化GPS数据结构 */
     nmea_zero_INFO(&info);
     nmea_parser_init(&parser);
     nmea_parse(&parser, (const char*)&(RxBuffer),sizeof(RxBuffer), &info);
     deg_lat = nmea_ndeg2degree(info.lat);
     deg_lon = nmea_ndeg2degree(info.lon);
-    //GMT时间换算成北京时间                                                                                                                                                                                                                                 
-    // printf("\r\n纬度：%f,经度%f\r\n",deg_lat,deg_lon);
-    // printf("海拔高度：%f 米\n", info.elv);
-    // printf("速度：%f km/h\n", info.speed);
-    // printf("\r\nPDOP：%f,HDOP：%f，VDOP：%f\r\n",info.PDOP,info.HDOP,info.VDOP);
+    //GMT时间换算成北京时间
+    #ifndef GPS_DEBUG_DISABLED
+    printf("\r\n纬度:%f,经度%f\r\n",deg_lat,deg_lon);
+    printf("海拔高度：%f 米\n", info.elv);
+    printf("速度：%f km/h\n", info.speed);
+    printf("\r\nPDOP:%f,HDOP:%f,VDOP:%f\r\n",info.PDOP,info.HDOP,info.VDOP);
+    #endif 
     Gps_Msg_t msg;
     msg.Lat     = deg_lat;
-                msg.Lon     = deg_lon;
+    msg.Lon     = deg_lon;
     msg.Height  = info.elv;
     msg.Hdop    = info.HDOP;
     msg.UtcTime = info.utc;

@@ -16,6 +16,8 @@ extern osThreadId myTask02Handle;
 
 extern osThreadId drvRecvHandle; 
 
+extern TimerHandle_t uploadTimer;
+
 #ifdef __cplusplus
 }
 #endif

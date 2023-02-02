@@ -27,7 +27,7 @@ extern "C" {
 
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-
+#include "UserApp.h"
 /* USER CODE BEGIN Includes */
 
 /* USER CODE END Includes */
@@ -37,9 +37,8 @@ extern "C" {
 /* USER CODE END Private defines */
 
 void MX_GPIO_Init(void);
-
+void vTimerCallback( TimerHandle_t xTimer );
 /* USER CODE BEGIN Prototypes */
-
 /* USER CODE END Prototypes */
 
 #ifdef __cplusplus

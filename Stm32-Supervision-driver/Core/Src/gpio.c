@@ -24,6 +24,8 @@
 #include  "string.h"
 #include "ProtocolPack.h"
 #include "main.h"
+#include "projdefs.h"
+
 /* USER CODE BEGIN 0 */
 
 /* USER CODE END 0 */
@@ -68,16 +70,16 @@ void MX_GPIO_Init(void)
   // HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
   /*Configure GPIO pins : PCPin PC2 */
-  GPIO_InitStruct.Pin = Upload_Button_Pin|GPIO_PIN_2;
+  GPIO_InitStruct.Pin = GPIO_PIN_2;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
   /*Configure GPIO pin : PtPin */
-  GPIO_InitStruct.Pin = PowerDown_ISR_Pin;
+  GPIO_InitStruct.Pin = PowerDown_ISR_Pin | Upload_Button_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING_FALLING;
   GPIO_InitStruct.Pull = GPIO_PULLDOWN;
-  HAL_GPIO_Init(PowerDown_ISR_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
   /*Configure GPIO pins : PC3 PC4 PC5 PC7
                            PC9 PC10 PC11 */
@@ -112,29 +114,6 @@ void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
-}
-
-static const uint8_t ftpBuf[2] = {0xFB,0x91};
-void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
-{
-
-   printf("CALL1111\n");
-  //掉电检测//
-  if(GPIO_Pin == GPIO_PIN_1)
-  {
-  //切换系统状态
-    printf("CALL\n");
-    ModuleState.VoltageModule.State = false;
-  }
-  //回传ftp
-  if(GPIO_Pin == Upload_Button_Pin)
-  {
-    ftpTaskPack_t  *task = (ftpTaskPack_t *) malloc(sizeof(ftpTaskPack_t));
-    memcpy(task,ftpBuf,2);
-    HAL_UART_Transmit(&huart2,(uint8_t *)task,sizeof(ftpTaskPack_t),0x200);
-    free(task);
-    task = NULL;
-  }
 }
 
 /* USER CODE BEGIN 2 */

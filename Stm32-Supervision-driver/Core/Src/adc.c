@@ -19,7 +19,6 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "adc.h"
-
 /* USER CODE BEGIN 0 */
 #include "MeteringDrivers.h"
 /* USER CODE END 0 */
@@ -95,7 +94,6 @@ void MX_ADC1_Init(void)
   HAL_ADCEx_Calibration_Start(&hadc1);
   HAL_ADC_Start_DMA(&hadc1,(uint32_t *)&AD_Buf,4);
   /* USER CODE END ADC1_Init 2 */
-
 }
 
 void HAL_ADC_MspInit(ADC_HandleTypeDef* adcHandle)

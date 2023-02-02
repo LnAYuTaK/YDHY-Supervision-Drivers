@@ -10,20 +10,22 @@ static int timeFlag ;
 static uint32_t LastLat ;
 static uint32_t LastLon ;
 static uint32_t StartTimeTemp ;
-static double flightDis = 0;
-// 检查gps 数据是否有效
-// 经纬度不为0 日期超过2023年且HDOP小于5
+static double flightDis;
+/*检查gps 数据是否有效
+经纬度不为0 日期超过2023年且HDOP小于5*/
 PackState CheckGpsState(Gps_Msg_t *msg)
 {
    nmeaTIME beiJingTime; 
    GMTconvert(&(msg->UtcTime),&beiJingTime,8,1);
    if((msg->Hdop<=5) && (msg->Lat != 0)&& (msg->Lon!=0)&&(beiJingTime.year+1900 >= 2023))
    { 
+      //更改状态灯
       ModuleState.GPSModle.State= true;                             
       return PACK_OK;
    }
    else
    {
+      //更改状态灯
       ModuleState.GPSModle.State= false;
       return PACK_ERROR;
    }
@@ -33,7 +35,6 @@ PackState CheckDriverState(MeterMsg_t *drvmsg)
 {
    return PACK_OK;
 }
-
 //根据4G模块状态切换指示灯
 PackState Net4G_decode(Net4GPack_t *msg)
 {
@@ -64,12 +65,21 @@ PackState Net4G_decode(Net4GPack_t *msg)
          {
             ModuleState.ReSendModule.State = false;
          }
+         if(msg->VoltageState == 0)
+         {
+             ModuleState.VoltageModule.State = true;
+         }
+         else if(msg->VoltageState == 1)
+         {
+            ModuleState.VoltageModule.State = false;
+         }
          return PACK_OK;
     }
     else
     {
       return PACK_ERROR;
     }
+    header = NULL;
 }
 //协议打包
 Pack_t * MakePack(Gps_Msg_t *msg,MeterMsg_t *drvmsg)
@@ -112,11 +122,11 @@ Pack_t * MakePack(Gps_Msg_t *msg,MeterMsg_t *drvmsg)
    pack->PressureGage2 = SW16(drvmsg->PressureGage2);
    pack->PressureGage3 = SW16(drvmsg->PressureGage3);
    pack->PressureGage4 = SW16(drvmsg->PressureGage4);
-   //预留数据
-   pack->SerialPadding = SW32(0);
    //本架次行驶距离
    double Nowlon =    msg->Lon;
    double Nowlat =    msg->Lat;
+      //预留数据
+   pack->SerialPadding = SW32(0);
    if(CheckDriverState(drvmsg)!= PACK_ERROR)
    {
       //结算距离

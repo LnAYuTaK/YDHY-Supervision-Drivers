@@ -52,8 +52,8 @@ typedef struct ProtocolPackag_s
    uint16_t  PressureGage2; //压力计2
    uint16_t  PressureGage3; //压力计3
    uint16_t  PressureGage4; //压力计4
+   uint32_t  FlightDistance;//本架次行驶距离
    uint32_t  SerialPadding; //串口预留数据
-   uint32_t  FlightDistance;//本架次行驶距离	
    uint8_t   CheckSum;      //校验和
 }Pack_t;
 #pragma pack(pop)
@@ -63,11 +63,12 @@ typedef struct ProtocolPackag_s
 //State 0 ERROR 
 typedef struct Net4GPack_s
 {
-  uint16_t  PackHead; //包头 Header
-  uint8_t   SDCardState;//Sd卡状态 
-  uint8_t   Net4GState;//4G模块网络状态  
-  uint8_t   UploadState;//ftp上传状态
-  uint8_t   CheckSum;  //校验和
+  uint16_t  PackHead;    //包头 Header
+  uint8_t   SDCardState; //Sd卡状态 
+  uint8_t   Net4GState;  //4G模块网络状态  
+  uint8_t   UploadState; //ftp上传状态
+  uint8_t   VoltageState;//掉电检测
+  uint8_t   CheckSum;    //校验和
    /* data */
 }Net4GPack_t;
 #pragma pack(pop)
@@ -82,10 +83,8 @@ typedef struct ftpTaskPack_s
 #pragma pack(pop)
 
 Pack_t * MakePack(Gps_Msg_t *msg,MeterMsg_t *drvmsg);
+//4G 解包
+PackState Net4G_decode(Net4GPack_t *msg);
 //GPS数据是否有效无效就不发//
 PackState CheckGpsState(Gps_Msg_t *msg);
-
-PackState Net4G_decode(Net4GPack_t *msg);
-
-
 #endif  //__ProtocolPackag_H

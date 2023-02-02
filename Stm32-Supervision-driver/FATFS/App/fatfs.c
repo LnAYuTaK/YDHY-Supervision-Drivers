@@ -24,7 +24,6 @@ FATFS SDFatFS;    /* File system object for SD logical drive */
 FIL SDFile;       /* File object for SD */  
 /* USER CODE BEGIN Variables */
 #include "stdio.h"
-#include "config.h"
 #include "StateInfo.h"
 FRESULT res;
 UINT bTW;

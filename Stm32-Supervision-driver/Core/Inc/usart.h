@@ -29,13 +29,13 @@ extern "C" {
 #include "main.h"
 
 /* USER CODE BEGIN Includes */
-#define RXBUFFERSIZE 768
+#define RXBUFFERSIZE 725
 
 extern uint8_t aRxBuffer;	
 extern __IO uint8_t RecvFlag;
 extern char RxBuffer[RXBUFFERSIZE]; 
 
-extern uint8_t RxUart2Buffer[32];
+extern uint8_t RxUart2Buffer[48];
 
 /* USER CODE END Includes */
 
