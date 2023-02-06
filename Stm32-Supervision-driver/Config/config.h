@@ -2,7 +2,7 @@
 #define	__Config_H
 //调试DEBUG 宏
 //注释相应宏 可以打开对应调试
-// #define GPS_DEBUG_DISABLED	
+#define GPS_DEBUG_DISABLED	
 
 #define PressureGage_DEBUG_DISABLED
 

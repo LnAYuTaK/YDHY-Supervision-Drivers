@@ -228,7 +228,6 @@ int GPS_decode()
     // nmea_property()->trace_func = &trace;
     // nmea_property()->error_func = &error;
     // nmea_property()->info_func = &gps_info;
-
     /* 初始化GPS数据结构 */
     nmea_zero_INFO(&info);
     nmea_parser_init(&parser);
