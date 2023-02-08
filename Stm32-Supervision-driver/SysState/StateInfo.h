@@ -47,6 +47,7 @@ typedef struct ModuleStateClass
 SysState GetSysState(ModuleStateClass_t *moduleState);
 //当前系统各个模块状态结构体
 extern ModuleStateClass_t  ModuleState;
+
 #ifdef __cplusplus
 }
 #endif

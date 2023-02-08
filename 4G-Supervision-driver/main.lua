@@ -49,7 +49,6 @@ local key = "1234567890123456"
 local uploadFlag = 0
 local powerfailure = 0
 local ConfigSuccess = 0
-local uploadError = 0
 
 -- Other define 
 local  fileName
@@ -99,10 +98,11 @@ function decodeFTPData(recvData,cmd)
     end
 end
 
--- 向服务器查询 今日上传文件大小
+-- 向服务器查询是否存在文件保证文件不重复上传 
 function isAllowUpload(filename,localfilename,LocalFILENAMET )
     r,data = ftp.login("PASV", "144.123.30.226", 21, "feilog", "ydhy@160725") -- 登录
-    if r == "426" or r == "503" then uploadError =1  return end
+    if r == "426" or r == "503" then  return end
+
 -- 这里做文件夹检查
     local TClock = os.date("*t")--查询模块系统时间
     local YearDirPath  = TClock.year
@@ -132,7 +132,7 @@ function isAllowUpload(filename,localfilename,LocalFILENAMET )
     log.info("FTP",ftpfileName.." "..localfilename)
     if ftpfileName == localfilename then
       if localFileSize == ftpFileSize then
-        log.info("FTP","找到当日FTP服务器文件且大小相等 退出FTP服务")
+        log.info("FTP","找到当日FTP服务器文件且大小相等 准备退出FTP服务")
         ftp.close()
         return 0
        else
@@ -148,7 +148,7 @@ function isAllowUpload(filename,localfilename,LocalFILENAMET )
     end
 end
 
-
+-- 获取配置文件
 function getAllConfig(file)
     local  rfile  = io.open(file,"r")
     for line in rfile:lines() do
@@ -184,12 +184,29 @@ local sdCardFlag = io.mount(io.SDCARD)
 --串口初始化
 uart.setup(1,115200,8,uart.PAR_NONE,uart.STOP_1,0,0,0) 
 -- GPIO中断 掉电检测关闭文件系统
+
+-- pins.setup(pio.P0_14, function()
+--     log.info("gpio", "中断关闭文件系统")
+--     sdCardFlag = 0
+--     powerfailure = 1
+--     if fd then
+--         io.unmount(io.SDCARD)
+--     end
+-- end, pio.PULLDOWN
+-- )
+
+--  Test 测试版本
 pins.setup(pio.P0_14, function()
     log.info("gpio", "中断关闭文件系统")
     sdCardFlag = 0
     powerfailure = 1
     if fd then
+        time = os.date("*t")--查询模块系统时间
+        log.info("PowerDown :",time)
         io.unmount(io.SDCARD)
+        while true do
+            print("CallBack")
+        end
     end
 end, pio.PULLDOWN
 )
@@ -198,7 +215,7 @@ end, pio.PULLDOWN
 pins.setup(pio.P0_15, function()
             sys.taskInit(function()
             log.info("gpio", "开启FTP回传任务")
-            if (uploadFlag  ~= 1 and ConfigSuccess == 1)  or  uploadError == 1  then
+            if (uploadFlag  ~= 1 and ConfigSuccess == 1)then
              -- 关闭文件系统
             uploadFlag  = 1
             local TClock = os.date("*t")--查询模块系统时间
@@ -212,18 +229,13 @@ pins.setup(pio.P0_15, function()
             local targetFile  = "/flylog".."/"..YearDirPath.."/"..DriverID..FileName
             -- 本地文件绝对路径
             local LocalFILENAMET =  "/sdcard0".."/"..Time .. ".txt"
-
             -- 这里查询下是否能上传
-            -- if(isAllowUpload(targetFile,localFileName,LocalFILENAMET) == 1) then
             result = isAllowUpload(targetFile,localFileName,LocalFILENAMET)
-            print(result)
-            if (result == 1 ) then
+            if (result == 1) then
             -- if(isAllowUpload(targetFile,localFileName,LocalFILENAMET) == 1) then
             sys.wait(100)
              -- 登录
             local r, n = ftp.login("PASV", "144.123.30.226", 21, "feilog", "ydhy@160725") -- 登录
-            if r == "426" or r == "503" then uploadError =1  
-            end
             fileName =  "/sdcard0".."/"..Time .. ".txt"
             ftp.checktype("I")
               -- 从sd卡目录上传文件至服务器
@@ -243,32 +255,34 @@ pins.setup(pio.P0_15, function()
             if r == '503'or r == "426"then
                 log.info("FTP","未找到上传的FTP服务器文件"..targetFile.."需要重新点击上传")
                 log.info("FTP",r)
-                uploadError = 1 
                 return 0
             end
             ftpfileName = decodeFTPData(data,"ftpfilename")
              -- -- 如果名字相同且大小相同则 切换正常状态灯
             if ftpfileName == localFileName then
                ftpFileSize = decodeFTPData(data,"filesize")
-               localFile  = tostring(io.fileSize(LocalFILENAMET))
-               log.info("FTP", string.len(ftpFileSize).."  "..string.len(localFile),ftpFileSize,localFile)
-               if ftpFileSize ==  localFile then
+               localFileSize  = tostring(io.fileSize(LocalFILENAMET))
+               log.info("FTP", string.len(ftpFileSize).."  "..string.len(localFileSize),ftpFileSize,localFileSize)
+               if ftpFileSize ==  localFileSize then
                     log.info("FTP", "校验文件大小相同 准备退出FTP")
                     uploadFlag  = 0
                else
                     log.info("FTP", "校验文件大小不同 请重新上传")
-                    uploadError = 1
                end
             else
                 -- 未知原因导致上传文件名字不同
-                uploadError = 1
                 log.info("FTP-Waring", ftpfileName)
                 log.info("FTP-Waring", FileName)
             end
             ftp.close()
+            end
+            if(result == 0) then
+                log.info("FTP", "校验文件大小相同 准备退出FTP!!!!")
+                uploadFlag  = 0
+            end
+            end
+
             log.info("FTP", "FTP服务结束")
-            end
-            end
             end)
 end, pio.PULLDOWN
 )

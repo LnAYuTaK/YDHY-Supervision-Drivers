@@ -72,7 +72,7 @@ void SetSysState(SysState state)
   case GPS_Error:
     SetRedOneFlash();
   break;
-  case  Voltage_Error:
+  case Voltage_Error:
     SetRedLight();
     break;
   default:

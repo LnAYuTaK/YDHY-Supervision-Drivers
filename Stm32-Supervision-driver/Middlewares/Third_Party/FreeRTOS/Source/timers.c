@@ -141,15 +141,15 @@ PRIVILEGED_DATA static TaskHandle_t xTimerTaskHandle = NULL;
 
 /*-----------------------------------------------------------*/
 
-#if( configSUPPORT_STATIC_ALLOCATION == 1 )
+// #if( configSUPPORT_STATIC_ALLOCATION == 1 )
 
 	/* If static allocation is supported then the application must provide the
 	following callback function - which enables the application to optionally
 	provide the memory that will be used by the timer task as the task's stack
 	and TCB. */
-	extern void vApplicationGetTimerTaskMemory( StaticTask_t **ppxTimerTaskTCBBuffer, StackType_t **ppxTimerTaskStackBuffer, uint32_t *pulTimerTaskStackSize );
-
-#endif
+	// extern void vApplicationGetTimerTaskMemory( StaticTask_t **ppxTimerTaskTCBBuffer, StackType_t **ppxTimerTaskStackBuffer, uint32_t *pulTimerTaskStackSize );
+void vApplicationGetTimerTaskMemory( StaticTask_t **ppxTimerTaskTCBBuffer, StackType_t **ppxTimerTaskStackBuffer, uint32_t *pulTimerTaskStackSize );
+// 
 
 /*
  * Initialise the infrastructure used by the timer service task if it has not
@@ -207,7 +207,6 @@ static TickType_t prvGetNextExpireTime( BaseType_t * const pxListWasEmpty ) PRIV
  * until either a timer does expire or a command is received.
  */
 static void prvProcessTimerOrBlockTask( const TickType_t xNextExpireTime, BaseType_t xListWasEmpty ) PRIVILEGED_FUNCTION;
-
 /*
  * Called after a Timer_t structure has been allocated either statically or
  * dynamically to fill in the structure's members.
@@ -219,6 +218,21 @@ static void prvInitialiseNewTimer(	const char * const pcTimerName,			/*lint !e97
 									TimerCallbackFunction_t pxCallbackFunction,
 									Timer_t *pxNewTimer ) PRIVILEGED_FUNCTION;
 /*-----------------------------------------------------------*/
+
+// 实现的静态定时任务GetTimerTaskMemory
+//定时器服务任务堆栈
+static StackType_t TimerTaskStack[configTIMER_TASK_STACK_DEPTH];
+//定时器服务任务控制块
+static StaticTask_t TimerTaskTCB;
+
+void vApplicationGetTimerTaskMemory( StaticTask_t **ppxTimerTaskTCBBuffer, 
+									 StackType_t **ppxTimerTaskStackBuffer, 
+									 uint32_t *pulTimerTaskStackSize )
+{
+	*ppxTimerTaskTCBBuffer=&TimerTaskTCB;
+	*ppxTimerTaskStackBuffer=TimerTaskStack; 
+	*pulTimerTaskStackSize=configTIMER_TASK_STACK_DEPTH;
+}
 
 BaseType_t xTimerCreateTimerTask( void )
 {

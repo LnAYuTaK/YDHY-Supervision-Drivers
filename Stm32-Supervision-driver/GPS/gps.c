@@ -41,7 +41,7 @@ void DebugStr(const char *str, int str_size)
     uint16_t i;
     printf("\r\nDebugStr: ");
     for(i=0;i<str_size;i++)
-      printf("%c",*(str+i));
+      printf("%X",*(str+i));    
     printf("\n");
 }   
 //计算角度
@@ -240,7 +240,10 @@ int GPS_decode()
     printf("海拔高度：%f 米\n", info.elv);
     printf("速度：%f km/h\n", info.speed);
     printf("\r\nPDOP:%f,HDOP:%f,VDOP:%f\r\n",info.PDOP,info.HDOP,info.VDOP);
-    #endif 
+    #endif
+    
+    printf("\r\n HeightX:  %02x\r\n",info.elv);
+    printf("\r\n HeightD:  %f\r\n",info.elv);
     Gps_Msg_t msg;
     msg.Lat     = deg_lat;
     msg.Lon     = deg_lon;

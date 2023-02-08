@@ -3,6 +3,8 @@
 #include "gps.h"
 #include "time.h"
 #include "StateInfo.h"
+#include "UserApp.h"
+
 // PackHead Buffer 
 static const uint8_t PackHeadBuf[2] = {0xFB,0x90};
 // 上电时间戳记录
@@ -41,6 +43,10 @@ PackState Net4G_decode(Net4GPack_t *msg)
     uint8_t * header = (uint8_t *)&(msg->PackHead);
     if( (header[0]== 0xFB )&& (header[1] == 0x90)) 
     {
+         //如果接收到心跳复位定时器
+         // 将4G模块状态显示正常
+         xTimerResetFromISR(NetStateTimer,NULL);
+         ModuleState.NET_4gModule.State = false;
          if(msg->Net4GState == 0)
          {
             ModuleState.NET_4gModule.State = true;
@@ -81,15 +87,26 @@ PackState Net4G_decode(Net4GPack_t *msg)
     }
     header = NULL;
 }
+
+// 计算校验和
+uint8_t CalculateChecksum(uint8_t array[], size_t size)
+{
+   uint8_t result = 0;
+   for(int i = 0; i < (size); i++)
+   {
+      result = result + array[i];
+   }
+   return result;
+}
 //协议打包
 Pack_t * MakePack(Gps_Msg_t *msg,MeterMsg_t *drvmsg)
 {
    uint32_t TimeStamp = DateTimeToTimeStamp(msg->UtcTime.year+1900,
-                msg->UtcTime.mon,
-                msg->UtcTime.day,
-                msg->UtcTime.hour,
-                msg->UtcTime.min,
-                msg->UtcTime.sec);
+                                            msg->UtcTime.mon,
+                                            msg->UtcTime.day,
+                                            msg->UtcTime.hour,
+                                            msg->UtcTime.min,
+                                            msg->UtcTime.sec);
    //这里申请了别忘了外边释放！！
    Pack_t *pack  =(Pack_t *) malloc(sizeof(Pack_t)); 
    //Pack Head
@@ -106,10 +123,14 @@ Pack_t * MakePack(Gps_Msg_t *msg,MeterMsg_t *drvmsg)
    pack->Lon      = SW32(((msg->Lon)*(10000000)));
    //纬度
    pack->Lat      = SW32(((msg->Lat)*(10000000)));
-   //高度
-   pack->Elv      = __REVSH(((msg->Height)*(10)));
+   //Test//
+   printf("\r\n HeightS:   %hd\r\n",(int16_t)((msg->Height*1000+0.5)/100.0));
+   //高度           
+
+   pack->Elv      = __REVSH((int16_t)((msg->Height*1000+0.5)/100.0));
    //速度
    pack->Speed    = SW16(((msg->Speed)*(100)));
+
    //当前GPS时间戳(不断更新)
    pack->GpsTimeStamp = SW32(TimeStamp); 
    //流速计
@@ -139,15 +160,10 @@ Pack_t * MakePack(Gps_Msg_t *msg,MeterMsg_t *drvmsg)
    //更新经纬度
    LastLon = msg->Lon;
    LastLat = msg->Lat;
-   //校验 不包含包头
-   uint8_t buf[sizeof(Pack_t)-2] = {0};
-   uint8_t checkSumTemp = 0;
-   memcpy(buf,&(pack->StartTimeStamp),sizeof(buf));
-   for(int i = 0 ; i < sizeof(buf);i++)
-   {
-      checkSumTemp  += buf[i];
-   }
-   pack->CheckSum = checkSumTemp;
+   //计算校验和不包含包头
+   pack->CheckSum = 0;
+   pack->CheckSum  = CalculateChecksum((uint8_t *)pack,sizeof(Pack_t));
+   // DebugStr((uint8_t *)pack,sizeof(Pack_t));
    return pack;
 }
 

@@ -68,10 +68,10 @@
 #define configUSE_PORT_OPTIMISED_TASK_SELECTION  1
 
 
-// #define configUSE_TIMERS				1	//使能软件定时器
-// #define configTIMER_TASK_PRIORITY		2		// 软件定时器的优先级
-// #define configTIMER_QUEUE_LENGTH		10		// 软件定时器的队列长度
-// #define configTIMER_TASK_STACK_DEPTH	(configMINIMAL_STACK_SIZE * 2)		// 软件定时器的堆栈空间大小（单位是字）
+#define configUSE_TIMERS				1	//使能软件定时器
+#define configTIMER_TASK_PRIORITY		5		// 软件定时器的优先级
+#define configTIMER_QUEUE_LENGTH		10		// 软件定时器的队列长度
+#define configTIMER_TASK_STACK_DEPTH	(configMINIMAL_STACK_SIZE)		// 软件定时器的堆栈空间大小（单位是字）
 
 
 /* Co-routine definitions. */

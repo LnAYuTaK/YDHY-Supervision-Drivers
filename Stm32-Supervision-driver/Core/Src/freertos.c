@@ -74,7 +74,7 @@ osThreadId myTask02Handle;
 
 osThreadId drvRecvHandle; 
 
-TimerHandle_t uploadTimer;
+TimerHandle_t NetStateTimer;
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -108,10 +108,24 @@ void vApplicationGetIdleTaskMemory( StaticTask_t **ppxIdleTaskTCBBuffer, StackTy
   * @param  None
   * @retval None
   */
+
+void TimerCallBack( TimerHandle_t xTimer )
+{
+  ModuleState.NET_4gModule.State = false;
+}
+
 void MX_FREERTOS_Init(void) {
   //临界保护下任务保证任务完整创建
-  taskENTER_CRITICAL();//开启临界区
+  //开启临界区
+  taskENTER_CRITICAL();
   //核心任务//
+  //心跳定时检测4G模块状态 
+  NetStateTimer= xTimerCreate("4GModuleState",  
+                               2500,            
+                               pdTRUE,         
+                               (void*)1,        
+                               TimerCallBack 
+                              );
   osThreadDef(defaultTask, StartDefaultTask, osPriorityHigh, 0,512);
   defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
   GpsMsgHandle = osMessageCreate(osMessageQ(GpsQueue),defaultTaskHandle);
@@ -123,15 +137,9 @@ void MX_FREERTOS_Init(void) {
   osThreadDef(drvRecvTask, StartDrvRecvTask, osPriorityNormal, 0, 190);
   drvRecvHandle = osThreadCreate(osThread(drvRecvTask), NULL);
   DriversMsgHandle = osMessageCreate(osMessageQ(DriversQueue),drvRecvHandle);
-
-  //消抖定时器初始化
-  // uploadTimer =   xTimerCreate( "uploadTimerSelect",
-  //                 pdMS_TO_TICKS( 10 ),
-  //                 pdFALSE,
-  //                 (void *) 0,
-  //                 vTimerCallback);
-
-  taskEXIT_CRITICAL(); //关闭临界区
+  //关闭临界区
+  xTimerStart(NetStateTimer,20);
+  taskEXIT_CRITICAL(); 
   /* USER CODE END RTOS_THREADS */
 }
 
@@ -157,10 +165,10 @@ void StartDefaultTask(void const * argument)
         Gps_Msg_t* gpsmeg = (Gps_Msg_t*)evt.value.p;
         MeterMsg_t* drvmsg = (MeterMsg_t*)evt2.value.p;
         //判断下gps数据有效性 
-        // #ifndef GPS_DATA_FILTER_DISABLED
-        // if(CheckGpsState(gpsmeg)!= PACK_ERROR)
-        // {
-        // #endif
+        #ifndef GPS_DATA_FILTER_DISABLED
+        if(CheckGpsState(gpsmeg)!= PACK_ERROR)
+        {
+        #endif
           //协议打包                                                                                                                                                                                            
           Pack_t *pack = MakePack(gpsmeg,drvmsg);                                                                                     
           //发送给4G模块
@@ -168,9 +176,9 @@ void StartDefaultTask(void const * argument)
           RecvFlag = 0;
           free(pack);
           pack = NULL;
-        // #ifndef GPS_DATA_FILTER_DISABLED
-        // }
-        // #endif
+        #ifndef GPS_DATA_FILTER_DISABLED
+        }
+        #endif
       }
     }
   }
@@ -188,6 +196,7 @@ void StartTask02(void const * argument)
 {
   //初始化LED 状态灯系统
   ledDriverInit();
+
   for(;;)
   { 
     //检测灯状态
