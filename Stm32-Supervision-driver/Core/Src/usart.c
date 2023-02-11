@@ -24,14 +24,11 @@
 #include  "ProtocolPack.h"
 #include "config.h"
 
-//串口一的 RXbuffer
+//串口二的 RXbuffer  负责GPS数据
 char RxBuffer[RXBUFFERSIZE];  //接收数据
-
-//串口二的 接收 buffer //主要是接收处理状态显示  不用开太大
-uint8_t RxUart2Buffer[48];
-
+//串口一的 接收 buffer //主要是接收处理状态显示  不用开太大
+uint8_t RxUart2Buffer[NETRECVBUFFER];
 uint8_t aRxBuffer;			      //接收中断缓冲
-
 __IO uint8_t RecvFlag = 0 ;
 
 
@@ -43,7 +40,7 @@ UART_HandleTypeDef huart3;
 DMA_HandleTypeDef hdma_usart1_rx;
 DMA_HandleTypeDef hdma_usart2_rx;
 /* USART1 init function */
-//GPS模块配置9600 
+//4G模块
 void MX_USART1_UART_Init(void)
 {
   /* USER CODE BEGIN USART1_Init 0 */
@@ -54,7 +51,7 @@ void MX_USART1_UART_Init(void)
 
   /* USER CODE END USART1_Init 1 */
   huart1.Instance = USART1;
-  huart1.Init.BaudRate = 9600;
+  huart1.Init.BaudRate = 115200;
   huart1.Init.WordLength = UART_WORDLENGTH_8B;
   huart1.Init.StopBits = UART_STOPBITS_1;
   huart1.Init.Parity = UART_PARITY_NONE;
@@ -68,7 +65,7 @@ void MX_USART1_UART_Init(void)
   //串口一DMA 加空闲中断
   /* USER CODE BEGIN USART1_Init 2 */
   __HAL_UART_ENABLE_IT(&huart1,UART_IT_IDLE);
-  if(HAL_UART_Receive_DMA(&huart1, (uint8_t *)RxBuffer, RXBUFFERSIZE) != HAL_OK)
+  if(HAL_UART_Receive_DMA(&huart1, (uint8_t *)RxUart2Buffer, NETRECVBUFFER) != HAL_OK)
   {
     Error_Handler();
   }
@@ -76,7 +73,7 @@ void MX_USART1_UART_Init(void)
 
 }
 /* USART2 init function */
-
+//GPS模块
 void MX_USART2_UART_Init(void)
 {
 
@@ -88,7 +85,7 @@ void MX_USART2_UART_Init(void)
 
   /* USER CODE END USART2_Init 1 */
   huart2.Instance = USART2;
-  huart2.Init.BaudRate = 115200;
+  huart2.Init.BaudRate = 9600;
   huart2.Init.WordLength = UART_WORDLENGTH_8B;
   huart2.Init.StopBits = UART_STOPBITS_1;
   huart2.Init.Parity = UART_PARITY_NONE;
@@ -99,9 +96,8 @@ void MX_USART2_UART_Init(void)
   {
     Error_Handler();
   }
-
   __HAL_UART_ENABLE_IT(&huart2,UART_IT_IDLE);
-  if(HAL_UART_Receive_DMA(&huart2, (uint8_t *)RxUart2Buffer, sizeof(RxUart2Buffer)) != HAL_OK)
+  if(HAL_UART_Receive_DMA(&huart2, (uint8_t *)RxBuffer,RXBUFFERSIZE) != HAL_OK)
   {
     Error_Handler();
   }
@@ -415,29 +411,31 @@ PUTCHAR_PROTOTYPE
 
 void USAR_UART_IDLECallback(UART_HandleTypeDef *huart)
 {
-  //GPS数据
+  //回复4G模块
   if(huart->Instance == USART1)
   {
-    HAL_UART_DMAStop(&huart1);
-    // HAL_UART_Transmit(&huart3,(uint8_t *)RxBuffer,sizeof(RxBuffer),0x200);
-    //解码暂时放在中断  NMea解码需要太大的Stack了 放在任务里边跑不起来//后续看情况修改
-    GPS_decode();
-    RecvFlag = 1;  
-    //清一下中断Buffer
-    memset(RxBuffer,0,sizeof(RxBuffer));    
-    HAL_UART_Receive_DMA(&huart1, (uint8_t*)RxBuffer, RXBUFFERSIZE);
-  }
-  //回复4G模块
-  else if(huart->Instance == USART2)
-  {
-     HAL_UART_DMAStop(&huart2);
+
+    printf("DEBUGGGG\n");
+     HAL_UART_DMAStop(&huart1);
      //DEBUG length
      Net4GPack_t pack;
      memcpy(&pack,RxUart2Buffer,sizeof(Net4GPack_t));
      Net4G_decode(&pack);
      //uint16_t data_length  = RXBUFFERSIZE - __HAL_DMA_GET_COUNTER(&hdma_usart2_rx);
      memset(RxUart2Buffer,0,sizeof(RxUart2Buffer));    
-     HAL_UART_Receive_DMA(&huart2, (uint8_t*)RxUart2Buffer,sizeof(RxUart2Buffer) );
+     HAL_UART_Receive_DMA(&huart1, (uint8_t*)RxUart2Buffer,NETRECVBUFFER);
+  }
+  //GPS数据
+  else if(huart->Instance == USART2)
+  {
+    HAL_UART_DMAStop(&huart2);
+    //HAL_UART_Transmit(&huart3,(uint8_t *)RxBuffer,sizeof(RxBuffer),0x200);
+    //解码暂时放在中断  NMea解码需要太大的Stack了 放在任务里边跑不起来//后续看情况修改
+    GPS_decode();
+    RecvFlag = 1;  
+    //清一下中断Buffer
+    memset(RxBuffer,0,sizeof(RxBuffer));    
+    HAL_UART_Receive_DMA(&huart2, (uint8_t*)RxBuffer, RXBUFFERSIZE);
   }
 }
 

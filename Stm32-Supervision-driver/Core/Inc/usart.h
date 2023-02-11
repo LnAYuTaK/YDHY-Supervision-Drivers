@@ -30,12 +30,13 @@ extern "C" {
 
 /* USER CODE BEGIN Includes */
 #define RXBUFFERSIZE 725
+#define NETRECVBUFFER 48
 
 extern uint8_t aRxBuffer;	
 extern __IO uint8_t RecvFlag;
 extern char RxBuffer[RXBUFFERSIZE]; 
 
-extern uint8_t RxUart2Buffer[48];
+extern uint8_t RxUart2Buffer[NETRECVBUFFER];
 
 /* USER CODE END Includes */
 

@@ -184,32 +184,33 @@ local sdCardFlag = io.mount(io.SDCARD)
 --串口初始化
 uart.setup(1,115200,8,uart.PAR_NONE,uart.STOP_1,0,0,0) 
 -- GPIO中断 掉电检测关闭文件系统
+uart.setup(2,115200,8,uart.PAR_NONE,uart.STOP_1,0,0,0) 
 
--- pins.setup(pio.P0_14, function()
---     log.info("gpio", "中断关闭文件系统")
---     sdCardFlag = 0
---     powerfailure = 1
---     if fd then
---         io.unmount(io.SDCARD)
---     end
--- end, pio.PULLDOWN
--- )
-
---  Test 测试版本
 pins.setup(pio.P0_14, function()
     log.info("gpio", "中断关闭文件系统")
     sdCardFlag = 0
     powerfailure = 1
     if fd then
-        time = os.date("*t")--查询模块系统时间
-        log.info("PowerDown :",time)
         io.unmount(io.SDCARD)
-        while true do
-            print("CallBack")
-        end
     end
-end, pio.PULLDOWN
+end, pio.PULLUP
 )
+
+-- --  Test 测试版本
+-- pins.setup(pio.P0_14, function()
+--     log.info("gpio", "中断关闭文件系统")
+--     sdCardFlag = 0
+--     powerfailure = 1
+--     if fd then
+--         time = os.date("*t")--查询模块系统时间
+--         log.info("PowerDown :",time)
+--         io.unmount(io.SDCARD)
+--         while true do
+--             print("CallBack")
+--         end
+--     end
+-- end, pio.PULLDOWN
+-- )
 
 --GPIO 中断 FTP 回传任务
 pins.setup(pio.P0_15, function()
@@ -366,7 +367,7 @@ function string_insert(str,index,insertStr, flag)
     end
 --  串口回调事件
 local function uart1ReceiveCb()
-    if ConfigSuccess ==1 then
+    -- if ConfigSuccess ==1 then
     local data=""
     local temp=""
     while true do
@@ -378,9 +379,10 @@ local function uart1ReceiveCb()
         end
         header1 =  string.byte(data, 1)
         header2 =  string.byte(data, 2)
+        -- log.info("UART",string.toHex((temp)))
         -- 长度判断 49
         if(string.len(data) == 49)then
-            data2 = data
+ 
             -- 包头判断
             if  header1 == 0xFB and  header2 == 0x90 then
                 -- 校验和判断
@@ -392,7 +394,7 @@ local function uart1ReceiveCb()
         end
     end
     end
-end
+-- end
 
 -- 串口一事件回调
 uart.on(1,"receive",uart1ReceiveCb)
@@ -460,6 +462,7 @@ sys.taskInit(function()
     end
     -- 发送当前状态
     uart.write(1,0xFB,0x90,SdCardState,Net4GState,UploadState,PowerState,0x00)
+    log.info("LED STATE",SdCardState,Net4GState,UploadState,PowerState)
     sys.wait(2000)
     end
 end)

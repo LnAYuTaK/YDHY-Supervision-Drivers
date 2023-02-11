@@ -15,8 +15,6 @@ SysState GetSysState(ModuleStateClass_t *moduleState)
   {
     return Normal;
   }
-
-  
   //根据优先级判断当前状态灯显示
   else if(!(moduleState->VoltageModule.State))
   {

@@ -172,7 +172,7 @@ void StartDefaultTask(void const * argument)
           //协议打包                                                                                                                                                                                            
           Pack_t *pack = MakePack(gpsmeg,drvmsg);                                                                                     
           //发送给4G模块
-          HAL_UART_Transmit(&huart2,(uint8_t *)pack,sizeof(Pack_t),0x200);
+          HAL_UART_Transmit(&huart1,(uint8_t *)pack,sizeof(Pack_t),0x200);
           RecvFlag = 0;
           free(pack);
           pack = NULL;
@@ -196,7 +196,6 @@ void StartTask02(void const * argument)
 {
   //初始化LED 状态灯系统
   ledDriverInit();
-
   for(;;)
   { 
     //检测灯状态
@@ -204,7 +203,6 @@ void StartTask02(void const * argument)
   }
   /* USER CODE END StartTask02 */
 }
-
 /**
 * @brief 流量计 压力计获取任务
 * @param argument: Not used

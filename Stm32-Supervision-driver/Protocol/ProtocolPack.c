@@ -46,15 +46,7 @@ PackState Net4G_decode(Net4GPack_t *msg)
          //如果接收到心跳复位定时器
          // 将4G模块状态显示正常
          xTimerResetFromISR(NetStateTimer,NULL);
-         ModuleState.NET_4gModule.State = false;
-         if(msg->Net4GState == 0)
-         {
-            ModuleState.NET_4gModule.State = true;
-         }
-         else if (msg->Net4GState == 1)
-         {
-           ModuleState.NET_4gModule.State = false;
-         }
+         ModuleState.NET_4gModule.State = true;
          if(msg->SDCardState == 0)
          {
             ModuleState.SDCardModle.State = true;
@@ -63,6 +55,14 @@ PackState Net4G_decode(Net4GPack_t *msg)
          {
             ModuleState.SDCardModle.State = false;
          } 
+         if(msg->Net4GState == 0)
+         {
+            ModuleState.NET_4gModule.State = true;
+         }
+         else if (msg->Net4GState == 1)
+         {
+           ModuleState.NET_4gModule.State = false;
+         }
          if(msg->UploadState == 0)
          {
              ModuleState.ReSendModule.State = true;
@@ -123,14 +123,10 @@ Pack_t * MakePack(Gps_Msg_t *msg,MeterMsg_t *drvmsg)
    pack->Lon      = SW32(((msg->Lon)*(10000000)));
    //纬度
    pack->Lat      = SW32(((msg->Lat)*(10000000)));
-   //Test//
-   printf("\r\n HeightS:   %hd\r\n",(int16_t)((msg->Height*1000+0.5)/100.0));
    //高度           
-
    pack->Elv      = __REVSH((int16_t)((msg->Height*1000+0.5)/100.0));
    //速度
    pack->Speed    = SW16(((msg->Speed)*(100)));
-
    //当前GPS时间戳(不断更新)
    pack->GpsTimeStamp = SW32(TimeStamp); 
    //流速计
@@ -163,7 +159,6 @@ Pack_t * MakePack(Gps_Msg_t *msg,MeterMsg_t *drvmsg)
    //计算校验和不包含包头
    pack->CheckSum = 0;
    pack->CheckSum  = CalculateChecksum((uint8_t *)pack,sizeof(Pack_t));
-   // DebugStr((uint8_t *)pack,sizeof(Pack_t));
    return pack;
 }
 
