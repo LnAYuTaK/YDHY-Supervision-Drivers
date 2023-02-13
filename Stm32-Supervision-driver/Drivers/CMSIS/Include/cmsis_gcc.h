@@ -931,7 +931,8 @@ __STATIC_FORCEINLINE uint32_t __REV16(uint32_t value)
   \param [in]    value  Value to reverse
   \return               Reversed value
  */
-__STATIC_FORCEINLINE int16_t __REVSH(int16_t value)
+__STATIC_FORCEINLINE int16_t 
+__REVSH(int16_t value)
 {
 #if (__GNUC__ > 4) || (__GNUC__ == 4 && __GNUC_MINOR__ >= 8)
   return (int16_t)__builtin_bswap16(value);

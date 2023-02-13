@@ -123,8 +123,8 @@ Pack_t * MakePack(Gps_Msg_t *msg,MeterMsg_t *drvmsg)
    pack->Lon      = SW32(((msg->Lon)*(10000000)));
    //纬度
    pack->Lat      = SW32(((msg->Lat)*(10000000)));
-   //高度           
-   pack->Elv      = __REVSH((int16_t)((msg->Height*1000+0.5)/100.0));
+   //高度  
+   pack->Elv      = __REVSH((int16_t)((msg->Height*1000.0+0.5)/100.0));
    //速度
    pack->Speed    = SW16(((msg->Speed)*(100)));
    //当前GPS时间戳(不断更新)
@@ -147,7 +147,7 @@ Pack_t * MakePack(Gps_Msg_t *msg,MeterMsg_t *drvmsg)
    if(CheckDriverState(drvmsg)!= PACK_ERROR)
    {
       //结算距离
-      if((LastLon != 0)||(LastLat!=0))
+      if((LastLon >0)&&(LastLat >0))
       {
         flightDis = flightDis+ GetDistance(LastLon,LastLat,Nowlon,Nowlat);
       }
