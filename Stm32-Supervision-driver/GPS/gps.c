@@ -224,11 +224,6 @@ int GPS_decode()
     double deg_lon;//转换成[degree].[degree]格式的经度
     nmeaINFO info;          //GPS解码后得到的信息
     nmeaPARSER parser;      //解码时使用的数据结构  
-    /* 设置用于输出调试信息的函数 */
-    // nmea_property()->trace_func = &trace;
-    // nmea_property()->error_func = &error;
-    // nmea_property()->info_func = &gps_info;
-    /* 初始化GPS数据结构 */
     nmea_zero_INFO(&info);
     nmea_parser_init(&parser);
     nmea_parse(&parser, (const char*)&(RxBuffer),sizeof(RxBuffer), &info);

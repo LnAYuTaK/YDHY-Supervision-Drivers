@@ -42,7 +42,8 @@
         "stdbool.h": "c",
         "timers.h": "c",
         "projdefs.h": "c",
-        "task.h": "c"
+        "task.h": "c",
+        "stm32f1xx_hal.h": "c"
     },
     "git.ignoreLimitWarning": true
 }

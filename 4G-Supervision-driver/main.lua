@@ -1,7 +1,7 @@
 --PROJECT：ascii string类型，可以随便定义，只要不使用,就行
 --VERSION：ascii string类型，如果使用Luat物联云平台固件升级的功能，必须按照"X.X.X"定义，X表示1位数字；否则可随便定义
-PROJECT = "FTP"
-VERSION = "2.0.0"
+PROJECT = "DRIVER"
+VERSION = "1.0.4"
 --加载日志功能模块，并且设置日志输出等级
 --如果关闭调用log模块接口输出的日志，等级设置为log.LOG_SILENT即可
 require "net"
@@ -26,6 +26,11 @@ require "string"
 require "crypto"
 require "common"
 -- require "basic"
+
+PRODUCT_KEY = "GuyzggPpOW6ZC1Q91JvZRMx2hJu14SRB"
+require"update"
+update.request()
+
 ril.request("AT+RNDISCALL=0,1")
 -- 开启NTP 授时
 ril.regUrc("+NITZ", function()    
@@ -49,13 +54,13 @@ local key = "1234567890123456"
 local uploadFlag = 0
 local powerfailure = 0
 local ConfigSuccess = 0
-
+local num =0
 -- Other define 
 local  fileName
 local fd
 
 -- Only User Test 
-local IP, Port = "103.46.128.49", "17353"
+-- local IP, Port = "103.46.128.49", "17353"
 -- local ServerIP, ServerPort = "124.221.214.114", "8083"
 local msgQuene = {}
 
@@ -179,13 +184,10 @@ end
 
 -- Sd卡挂载
 local sdCardFlag = io.mount(io.SDCARD)
-
-
 --串口初始化
 uart.setup(1,115200,8,uart.PAR_NONE,uart.STOP_1,0,0,0) 
 -- GPIO中断 掉电检测关闭文件系统
 uart.setup(2,115200,8,uart.PAR_NONE,uart.STOP_1,0,0,0) 
-
 pins.setup(pio.P0_14, function()
     log.info("gpio", "中断关闭文件系统")
     sdCardFlag = 0
@@ -291,26 +293,12 @@ end, pio.PULLDOWN
 -- 处理队列里数据任务
 function outMsgprocess(socketClient)
     --队列中有消息
-    while #msgQuene>0 and (socket.isReady()) and ConfigSuccess ==1 do
+    while #msgQuene>0 and ConfigSuccess ==1 do
         --获取消息，并从队列中删除
         local outMsg = table.remove(msgQuene,1)
         -- 如果sd卡挂载且并没有ftp回传任务则记录文件至sd卡
         if sdCardFlag == 1 and uploadFlag  == 0 then
         local result = socketClient:asyncSend(outMsg)
-        -- 先获取当日时间  根据时间  是否创建文件
-        local tClock = os.date("*t")--查询模块系统时间
-        local time = string.format(DriverID.."_%04d_%02d_%02d",tClock.year,tClock.month,tClock.day)
-        fileName =  "/sdcard0".."/"..time .. ".txt"
-        -- 加密模式：ECB, 填充方式：ZeroPadding, 密钥：1234567890123456, 密钥长度：128 bit
-            fd = io.open(fileName,"a+")
-            if fd then
-                -- 添加换行 
-                encodeStr = crypto.aes_encrypt("ECB", "ZERO", outMsg, key)
-                fd:write(encodeStr.."\n")
-                log.info("AES",string.toHex(encodeStr))
-                log.info("SDCard",string.toHex(outMsg))
-                fd:close()
-            end
         --发送失败的话立刻返回nil（等同于false）
         if not result then return end
         end
@@ -389,7 +377,36 @@ local function uart1ReceiveCb()
                 -- 这里是实时后台任务
                 local insertStr =  string_insert(string.format("%04x",DriverID),3,' ')
                 data  = string.gsub(bin2hex(data),"00 01",insertStr,1)
-                insertMsg(hex2bin(data))
+
+                local tClock = os.date("*t")--查询模块系统时间
+                local time = string.format(DriverID.."_%04d_%02d_%02d",tClock.year,tClock.month,tClock.day)
+                fileName =  "/sdcard0".."/"..time .. ".txt"
+
+                local msg = hex2bin(data)
+                -- 加密模式：ECB, 填充方式：ZeroPadding, 密钥：1234567890123456, 密钥长度：128 bit
+                fd = io.open(fileName,"a+")
+                if fd then
+                    -- 添加换行 
+                    encodeStr = crypto.aes_encrypt("ECB", "ZERO", msg, key)
+
+                    if fd:write(encodeStr.."\n") then
+                        -- log.info("Write" ,"SUCCESS")
+                    else
+                        -- log.info("Write" ,"ERROR")
+                        sdCardFlag = 0
+                    end
+                    -- log.info("AES",string.toHex(encodeStr))
+                    -- log.info("SDCard",string.toHex(msg))
+                    fd:close()
+                else
+                    sdCardFlag = 0
+                    fd:close()
+
+                end
+                -- --  如果网络正常就放队列里边发送出去
+                if socket.isReady() then
+                    insertMsg(msg)
+                end
             end
         end
     end
@@ -400,8 +417,10 @@ local function uart1ReceiveCb()
 uart.on(1,"receive",uart1ReceiveCb)
 
 sys.init(0, 0)
+
+
 local SocketClient
--- 创建后台服务链接任务//
+-- 创建后台服务链接任务
 sys.taskInit(function()
     while true do
         while not socket.isReady() do sys.wait(1000) end
@@ -462,10 +481,19 @@ sys.taskInit(function()
     end
     -- 发送当前状态
     uart.write(1,0xFB,0x90,SdCardState,Net4GState,UploadState,PowerState,0x00)
-    log.info("LED STATE",SdCardState,Net4GState,UploadState,PowerState)
+    log.info("TEST","TEST")
     sys.wait(2000)
     end
 end)
+
+sys.taskInit(function()
+
+  while 1 do
+      sys.wait(2000)
+      log.info("FOTA","version",VERSION)
+  end
+end)
+ 
 
 -- 信息发送任务
 sys.taskInit(function()
@@ -478,5 +506,8 @@ sys.taskInit(function()
     end
     end
 end)
+
+
+
 
 sys.run()

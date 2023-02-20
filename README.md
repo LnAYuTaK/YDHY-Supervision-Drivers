@@ -14,10 +14,10 @@
 | PA15 | 流量计2脉冲计数器TIM2  |
 | PD2  | 流量计3脉冲计TIM3  |     
 | PA0  | 流量计4脉冲计TIM8  |                               
-| PA2  | 4G模块串口TX  |
-| PA3  | 4G模块串口RX  |
-| PA9  | GPS模块串口TX  |
-| PA10 | GPS模块串口RX  |
+| PA2  | GPS模块串口TX  |
+| PA3  | GPS模块串口RX  |
+| PA9  | 4G模块串口TX |
+| PA10 | 4G模块串口RX   |
 | PB10 | 调试串口TX  | 
 | PB11 | 调试串口RX  |
 | PC10 | 串口预留TX  |

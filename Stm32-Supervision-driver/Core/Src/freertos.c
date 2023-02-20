@@ -165,10 +165,8 @@ void StartDefaultTask(void const * argument)
         Gps_Msg_t* gpsmeg = (Gps_Msg_t*)evt.value.p;
         MeterMsg_t* drvmsg = (MeterMsg_t*)evt2.value.p;
         //判断下gps数据有效性 
-        #ifndef GPS_DATA_FILTER_DISABLED
-        if(CheckGpsState(gpsmeg)!= PACK_ERROR)
-        {
-        #endif
+        // if(CheckGpsState(gpsmeg)!= PACK_ERROR)
+        // {
           //协议打包                                                                                                                                                                                            
           Pack_t *pack = MakePack(gpsmeg,drvmsg);                                                                                     
           //发送给4G模块
@@ -176,9 +174,7 @@ void StartDefaultTask(void const * argument)
           RecvFlag = 0;
           free(pack);
           pack = NULL;
-        #ifndef GPS_DATA_FILTER_DISABLED
-        }
-        #endif
+        // }
       }
     }
   }
